@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  StrongBibration
 //
-//  Created by newAccount on 30.01.2024.
+//  Created by Vova Kolomyltsev on 30.01.2024.
 //
 
 import UIKit

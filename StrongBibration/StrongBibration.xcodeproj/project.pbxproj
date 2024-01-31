@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37A11BC1A9F3F094A9932E51 /* Pods_StrongBibration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D887EB9DC490C9B5C8DB680 /* Pods_StrongBibration.framework */; };
 		BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A35B2B691F25000E334E /* AppDelegate.swift */; };
 		BD22A35E2B691F25000E334E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A35D2B691F25000E334E /* SceneDelegate.swift */; };
 		BD22A3602B691F25000E334E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A35F2B691F25000E334E /* ViewController.swift */; };
 		BD22A3652B691F28000E334E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD22A3642B691F28000E334E /* Assets.xcassets */; };
 		BD22A3682B691F28000E334E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD22A3662B691F28000E334E /* LaunchScreen.storyboard */; };
+		BD22A3712B6921D2000E334E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD22A3702B6921D2000E334E /* SnapKit */; };
+		BD22A3732B6921D2000E334E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = BD22A3722B6921D2000E334E /* SnapKit-Dynamic */; };
+		BD22A3792B6994D1000E334E /* SizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A3782B6994D1000E334E /* SizeHelper.swift */; };
+		BD22A37B2B6996E3000E334E /* Double + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A37A2B6996E3000E334E /* Double + ext.swift */; };
+		BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A37C2B6997F6000E334E /* UIColor + ext.swift */; };
+		BD22A37F2B699880000E334E /* UIVIew + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A37E2B699880000E334E /* UIVIew + ext.swift */; };
+		BD22A3822B699BB5000E334E /* MainScreenNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A3812B699BB5000E334E /* MainScreenNavigationController.swift */; };
+		BD7B445C2B6A4CAF00ECD736 /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B445B2B6A4CAF00ECD736 /* SettingsNavigationController.swift */; };
+		BD7B445E2B6A51E600ECD736 /* PatternsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B445D2B6A51E600ECD736 /* PatternsNavigationController.swift */; };
+		BD7B44602B6A525B00ECD736 /* IntensityNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B445F2B6A525B00ECD736 /* IntensityNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B52398C4B785B4AA33450BD /* Pods-StrongBibration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrongBibration.debug.xcconfig"; path = "Target Support Files/Pods-StrongBibration/Pods-StrongBibration.debug.xcconfig"; sourceTree = "<group>"; };
+		1D887EB9DC490C9B5C8DB680 /* Pods_StrongBibration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrongBibration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23EE7E5A3C6C01105F51397D /* Pods-StrongBibration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrongBibration.release.xcconfig"; path = "Target Support Files/Pods-StrongBibration/Pods-StrongBibration.release.xcconfig"; sourceTree = "<group>"; };
 		BD22A3582B691F25000E334E /* StrongBibration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrongBibration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD22A35B2B691F25000E334E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD22A35D2B691F25000E334E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +36,14 @@
 		BD22A3642B691F28000E334E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD22A3672B691F28000E334E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD22A3692B691F28000E334E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD22A3782B6994D1000E334E /* SizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeHelper.swift; sourceTree = "<group>"; };
+		BD22A37A2B6996E3000E334E /* Double + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + ext.swift"; sourceTree = "<group>"; };
+		BD22A37C2B6997F6000E334E /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
+		BD22A37E2B699880000E334E /* UIVIew + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew + ext.swift"; sourceTree = "<group>"; };
+		BD22A3812B699BB5000E334E /* MainScreenNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenNavigationController.swift; sourceTree = "<group>"; };
+		BD7B445B2B6A4CAF00ECD736 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
+		BD7B445D2B6A51E600ECD736 /* PatternsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsNavigationController.swift; sourceTree = "<group>"; };
+		BD7B445F2B6A525B00ECD736 /* IntensityNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntensityNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +51,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD22A3712B6921D2000E334E /* SnapKit in Frameworks */,
+				BD22A3732B6921D2000E334E /* SnapKit-Dynamic in Frameworks */,
+				37A11BC1A9F3F094A9932E51 /* Pods_StrongBibration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A1131C1EA8502EEC4CFB475 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B52398C4B785B4AA33450BD /* Pods-StrongBibration.debug.xcconfig */,
+				23EE7E5A3C6C01105F51397D /* Pods-StrongBibration.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B57DC8751AA6B6CE926FFA6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D887EB9DC490C9B5C8DB680 /* Pods_StrongBibration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD22A34F2B691F25000E334E = {
 			isa = PBXGroup;
 			children = (
 				BD22A35A2B691F25000E334E /* StrongBibration */,
 				BD22A3592B691F25000E334E /* Products */,
+				7A1131C1EA8502EEC4CFB475 /* Pods */,
+				B57DC8751AA6B6CE926FFA6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +98,62 @@
 		BD22A35A2B691F25000E334E /* StrongBibration */ = {
 			isa = PBXGroup;
 			children = (
+				BD22A3802B699B99000E334E /* Navigation */,
+				BD22A3762B699437000E334E /* Common */,
+				BD22A3752B692BEF000E334E /* Modules */,
+				BD22A3742B6921DA000E334E /* Resourses */,
 				BD22A35B2B691F25000E334E /* AppDelegate.swift */,
 				BD22A35D2B691F25000E334E /* SceneDelegate.swift */,
 				BD22A35F2B691F25000E334E /* ViewController.swift */,
+			);
+			path = StrongBibration;
+			sourceTree = "<group>";
+		};
+		BD22A3742B6921DA000E334E /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
 				BD22A3642B691F28000E334E /* Assets.xcassets */,
 				BD22A3662B691F28000E334E /* LaunchScreen.storyboard */,
 				BD22A3692B691F28000E334E /* Info.plist */,
 			);
-			path = StrongBibration;
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		BD22A3752B692BEF000E334E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BD22A3762B699437000E334E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BD22A3772B6994B9000E334E /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BD22A3772B6994B9000E334E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BD22A3782B6994D1000E334E /* SizeHelper.swift */,
+				BD22A37A2B6996E3000E334E /* Double + ext.swift */,
+				BD22A37C2B6997F6000E334E /* UIColor + ext.swift */,
+				BD22A37E2B699880000E334E /* UIVIew + ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BD22A3802B699B99000E334E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BD22A3812B699BB5000E334E /* MainScreenNavigationController.swift */,
+				BD7B445B2B6A4CAF00ECD736 /* SettingsNavigationController.swift */,
+				BD7B445D2B6A51E600ECD736 /* PatternsNavigationController.swift */,
+				BD7B445F2B6A525B00ECD736 /* IntensityNavigationController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,15 +163,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD22A36C2B691F28000E334E /* Build configuration list for PBXNativeTarget "StrongBibration" */;
 			buildPhases = (
+				F70F65AF1176DBE2E90AD008 /* [CP] Check Pods Manifest.lock */,
 				BD22A3542B691F25000E334E /* Sources */,
 				BD22A3552B691F25000E334E /* Frameworks */,
 				BD22A3562B691F25000E334E /* Resources */,
+				B280982A6839FF13868FBDFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = StrongBibration;
+			packageProductDependencies = (
+				BD22A3702B6921D2000E334E /* SnapKit */,
+				BD22A3722B6921D2000E334E /* SnapKit-Dynamic */,
+			);
 			productName = StrongBibration;
 			productReference = BD22A3582B691F25000E334E /* StrongBibration.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +206,9 @@
 				Base,
 			);
 			mainGroup = BD22A34F2B691F25000E334E;
+			packageReferences = (
+				BD22A36F2B6921D2000E334E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = BD22A3592B691F25000E334E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,13 +230,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B280982A6839FF13868FBDFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StrongBibration/Pods-StrongBibration-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StrongBibration/Pods-StrongBibration-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StrongBibration/Pods-StrongBibration-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F70F65AF1176DBE2E90AD008 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StrongBibration-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD22A3542B691F25000E334E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD22A3822B699BB5000E334E /* MainScreenNavigationController.swift in Sources */,
+				BD22A37F2B699880000E334E /* UIVIew + ext.swift in Sources */,
+				BD22A37B2B6996E3000E334E /* Double + ext.swift in Sources */,
 				BD22A3602B691F25000E334E /* ViewController.swift in Sources */,
 				BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */,
+				BD7B445C2B6A4CAF00ECD736 /* SettingsNavigationController.swift in Sources */,
+				BD7B445E2B6A51E600ECD736 /* PatternsNavigationController.swift in Sources */,
+				BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */,
+				BD7B44602B6A525B00ECD736 /* IntensityNavigationController.swift in Sources */,
+				BD22A3792B6994D1000E334E /* SizeHelper.swift in Sources */,
 				BD22A35E2B691F25000E334E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +342,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -206,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +405,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -263,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -275,6 +426,7 @@
 		};
 		BD22A36D2B691F28000E334E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B52398C4B785B4AA33450BD /* Pods-StrongBibration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -282,11 +434,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6R59JHT6PY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StrongBibration/Info.plist;
+				INFOPLIST_FILE = StrongBibration/Resourses/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +455,7 @@
 		};
 		BD22A36E2B691F28000E334E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23EE7E5A3C6C01105F51397D /* Pods-StrongBibration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,11 +463,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6R59JHT6PY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StrongBibration/Info.plist;
+				INFOPLIST_FILE = StrongBibration/Resourses/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,6 +504,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD22A36F2B6921D2000E334E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD22A3702B6921D2000E334E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD22A36F2B6921D2000E334E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		BD22A3722B6921D2000E334E /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD22A36F2B6921D2000E334E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD22A3502B691F25000E334E /* Project object */;
 }
