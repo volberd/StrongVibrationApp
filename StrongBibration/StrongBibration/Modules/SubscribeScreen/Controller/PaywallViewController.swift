@@ -11,7 +11,7 @@ import StoreKit
 @available(iOS 15.0, *)
 class NewPaywallViewController: UIViewController {
     
-//    var mainView: ProtectPaywallView
+    var mainView: PaywallView
     private var currentSelectedIndex: Int = 0
     
     private let storeKitManager: SubscriptionManager
@@ -27,7 +27,7 @@ class NewPaywallViewController: UIViewController {
     init(storeKit: SubscriptionManager, completion: @escaping () -> Void) {
         self.storeKitManager = storeKit
         self.successCompletion = completion
-//        self.mainView = ProtectPaywallView()
+        self.mainView = PaywallView()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -36,8 +36,7 @@ class NewPaywallViewController: UIViewController {
     }
     
     override func loadView() {
-//        view = mainView
-
+        view = mainView
     }
     
     override func viewDidLoad() {
