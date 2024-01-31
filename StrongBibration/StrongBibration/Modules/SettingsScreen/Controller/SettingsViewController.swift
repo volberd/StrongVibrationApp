@@ -11,10 +11,10 @@ import SnapKit
 
 class SettingsViewController: UIViewController {
     private let mainView = SettingsView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func loadView() {

@@ -27,6 +27,17 @@
 		BD7B44742B6A548E00ECD736 /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44732B6A548E00ECD736 /* PatternsView.swift */; };
 		BD7B44762B6A54A100ECD736 /* IntencityVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44752B6A54A100ECD736 /* IntencityVIewController.swift */; };
 		BD7B44782B6A54B200ECD736 /* IntencityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44772B6A54B200ECD736 /* IntencityView.swift */; };
+		BD7B447B2B6A740D00ECD736 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD7B447D2B6A740D00ECD736 /* Localizable.strings */; };
+		BD7B44832B6A77FE00ECD736 /* UIFont + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44822B6A77FE00ECD736 /* UIFont + ext.swift */; };
+		BD7B44882B6A86AC00ECD736 /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44872B6A86AC00ECD736 /* SubscribeButton.swift */; };
+		BD7B448E2B6A8F2000ECD736 /* SubscriptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B448D2B6A8F1F00ECD736 /* SubscriptionsModel.swift */; };
+		BD7B44912B6A903200ECD736 /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44902B6A903200ECD736 /* CachingManager.swift */; };
+		BD7B44932B6A906500ECD736 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44922B6A906500ECD736 /* SubscriptionService.swift */; };
+		BD7B44952B6A90F700ECD736 /* PaywallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44942B6A90F700ECD736 /* PaywallViewController.swift */; };
+		BD7B44982B6A91CF00ECD736 /* ProgressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44972B6A91CF00ECD736 /* ProgressHelper.swift */; };
+		BD7B449A2B6A91E200ECD736 /* ProgressHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44992B6A91E200ECD736 /* ProgressHelperView.swift */; };
+		BD7B449C2B6A91F500ECD736 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B449B2B6A91F500ECD736 /* ActivityIndicator.swift */; };
+		BD7B449E2B6A922E00ECD736 /* FloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B449D2B6A922E00ECD736 /* FloatingPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +61,21 @@
 		BD7B44732B6A548E00ECD736 /* PatternsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsView.swift; sourceTree = "<group>"; };
 		BD7B44752B6A54A100ECD736 /* IntencityVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntencityVIewController.swift; sourceTree = "<group>"; };
 		BD7B44772B6A54B200ECD736 /* IntencityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntencityView.swift; sourceTree = "<group>"; };
+		BD7B447C2B6A740D00ECD736 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD7B447F2B6A778D00ECD736 /* Poppins-Extrabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Extrabold.ttf"; sourceTree = "<group>"; };
+		BD7B44802B6A778D00ECD736 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		BD7B44812B6A778E00ECD736 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		BD7B44822B6A77FE00ECD736 /* UIFont + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + ext.swift"; sourceTree = "<group>"; };
+		BD7B44842B6A79A200ECD736 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		BD7B44872B6A86AC00ECD736 /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
+		BD7B448D2B6A8F1F00ECD736 /* SubscriptionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsModel.swift; sourceTree = "<group>"; };
+		BD7B44902B6A903200ECD736 /* CachingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
+		BD7B44922B6A906500ECD736 /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		BD7B44942B6A90F700ECD736 /* PaywallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewController.swift; sourceTree = "<group>"; };
+		BD7B44972B6A91CF00ECD736 /* ProgressHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHelper.swift; sourceTree = "<group>"; };
+		BD7B44992B6A91E200ECD736 /* ProgressHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHelperView.swift; sourceTree = "<group>"; };
+		BD7B449B2B6A91F500ECD736 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		BD7B449D2B6A922E00ECD736 /* FloatingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +110,8 @@
 		BD22A35A2B691F25000E334E /* StrongBibration */ = {
 			isa = PBXGroup;
 			children = (
+				BD7B448F2B6A901D00ECD736 /* Managers */,
+				BD7B44852B6A857E00ECD736 /* Components */,
 				BD22A3802B699B99000E334E /* Navigation */,
 				BD22A3762B699437000E334E /* Common */,
 				BD22A3752B692BEF000E334E /* Modules */,
@@ -97,9 +125,11 @@
 		BD22A3742B6921DA000E334E /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				BD7B447E2B6A774F00ECD736 /* Font */,
 				BD22A3642B691F28000E334E /* Assets.xcassets */,
 				BD22A3662B691F28000E334E /* LaunchScreen.storyboard */,
 				BD22A3692B691F28000E334E /* Info.plist */,
+				BD7B447D2B6A740D00ECD736 /* Localizable.strings */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -107,6 +137,7 @@
 		BD22A3752B692BEF000E334E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BD7B44892B6A8D1200ECD736 /* SubscribeScreen */,
 				BD7B44692B6A53F600ECD736 /* IntencityScreen */,
 				BD7B44652B6A53D800ECD736 /* PatternsScreen */,
 				BD7B44612B6A53B800ECD736 /* SettingsScreen */,
@@ -117,6 +148,7 @@
 		BD22A3762B699437000E334E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BD7B44962B6A91BE00ECD736 /* Helpers */,
 				BD22A3772B6994B9000E334E /* Extension */,
 			);
 			path = Common;
@@ -129,6 +161,8 @@
 				BD22A37A2B6996E3000E334E /* Double + ext.swift */,
 				BD22A37C2B6997F6000E334E /* UIColor + ext.swift */,
 				BD22A37E2B699880000E334E /* UIVIew + ext.swift */,
+				BD7B44822B6A77FE00ECD736 /* UIFont + ext.swift */,
+				BD7B449D2B6A922E00ECD736 /* FloatingPoint.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -243,6 +277,85 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BD7B447E2B6A774F00ECD736 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B447F2B6A778D00ECD736 /* Poppins-Extrabold.ttf */,
+				BD7B44802B6A778D00ECD736 /* Poppins-Regular.ttf */,
+				BD7B44812B6A778E00ECD736 /* Poppins-SemiBold.ttf */,
+				BD7B44842B6A79A200ECD736 /* Poppins-Medium.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		BD7B44852B6A857E00ECD736 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44862B6A868A00ECD736 /* CustomUI */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BD7B44862B6A868A00ECD736 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44872B6A86AC00ECD736 /* SubscribeButton.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		BD7B44892B6A8D1200ECD736 /* SubscribeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B448C2B6A8D2A00ECD736 /* Controller */,
+				BD7B448B2B6A8D2500ECD736 /* View */,
+				BD7B448A2B6A8D1F00ECD736 /* Model */,
+			);
+			path = SubscribeScreen;
+			sourceTree = "<group>";
+		};
+		BD7B448A2B6A8D1F00ECD736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B448D2B6A8F1F00ECD736 /* SubscriptionsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD7B448B2B6A8D2500ECD736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD7B448C2B6A8D2A00ECD736 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44942B6A90F700ECD736 /* PaywallViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD7B448F2B6A901D00ECD736 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44902B6A903200ECD736 /* CachingManager.swift */,
+				BD7B44922B6A906500ECD736 /* SubscriptionService.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BD7B44962B6A91BE00ECD736 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44972B6A91CF00ECD736 /* ProgressHelper.swift */,
+				BD7B44992B6A91E200ECD736 /* ProgressHelperView.swift */,
+				BD7B449B2B6A91F500ECD736 /* ActivityIndicator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD22A3682B691F28000E334E /* LaunchScreen.storyboard in Resources */,
+				BD7B447B2B6A740D00ECD736 /* Localizable.strings in Resources */,
 				BD22A3652B691F28000E334E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,22 +434,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7B44832B6A77FE00ECD736 /* UIFont + ext.swift in Sources */,
 				BD22A3822B699BB5000E334E /* MainScreenNavigationController.swift in Sources */,
 				BD22A37F2B699880000E334E /* UIVIew + ext.swift in Sources */,
+				BD7B449A2B6A91E200ECD736 /* ProgressHelperView.swift in Sources */,
 				BD22A37B2B6996E3000E334E /* Double + ext.swift in Sources */,
 				BD7B44722B6A548200ECD736 /* PatternsViewController.swift in Sources */,
 				BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */,
+				BD7B44882B6A86AC00ECD736 /* SubscribeButton.swift in Sources */,
 				BD7B445C2B6A4CAF00ECD736 /* SettingsNavigationController.swift in Sources */,
+				BD7B44982B6A91CF00ECD736 /* ProgressHelper.swift in Sources */,
 				BD7B445E2B6A51E600ECD736 /* PatternsNavigationController.swift in Sources */,
 				BD7B44742B6A548E00ECD736 /* PatternsView.swift in Sources */,
+				BD7B449E2B6A922E00ECD736 /* FloatingPoint.swift in Sources */,
 				BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */,
+				BD7B44912B6A903200ECD736 /* CachingManager.swift in Sources */,
 				BD7B44602B6A525B00ECD736 /* IntensityNavigationController.swift in Sources */,
 				BD22A3792B6994D1000E334E /* SizeHelper.swift in Sources */,
+				BD7B449C2B6A91F500ECD736 /* ActivityIndicator.swift in Sources */,
 				BD22A35E2B691F25000E334E /* SceneDelegate.swift in Sources */,
+				BD7B448E2B6A8F2000ECD736 /* SubscriptionsModel.swift in Sources */,
 				BD7B44782B6A54B200ECD736 /* IntencityView.swift in Sources */,
 				BD7B446E2B6A542900ECD736 /* SettingsViewController.swift in Sources */,
 				BD7B44762B6A54A100ECD736 /* IntencityVIewController.swift in Sources */,
+				BD7B44952B6A90F700ECD736 /* PaywallViewController.swift in Sources */,
 				BD7B44702B6A546E00ECD736 /* SettingsView.swift in Sources */,
+				BD7B44932B6A906500ECD736 /* SubscriptionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +472,14 @@
 				BD22A3672B691F28000E334E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BD7B447D2B6A740D00ECD736 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD7B447C2B6A740D00ECD736 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -492,7 +624,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = samurai.StrongBibration;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vibrate.massager.massage.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -520,7 +652,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = samurai.StrongBibration;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vibrate.massager.massage.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

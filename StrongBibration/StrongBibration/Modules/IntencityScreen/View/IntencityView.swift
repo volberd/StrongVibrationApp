@@ -18,6 +18,15 @@ class IntensityView: UIView {
         return gradient
     }()
     
+    private let notVibtaionLabel: UILabel = {
+       let obj = UILabel()
+        obj.text = "Not vibrating?"
+        obj.font = .systemFont(ofSize: 14.sizeH, weight: .regular)
+        obj.textColor = .white
+        obj.textAlignment = .center
+        return obj
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -29,6 +38,13 @@ class IntensityView: UIView {
     
     private func setup() {
         layer.addSublayer(gradientLayer)
+        
+        addSubview(notVibtaionLabel)
+        
+        notVibtaionLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(safeAreaLayoutGuide).offset(16.sizeH)
+        }
     }
     
     override func layoutSubviews() {

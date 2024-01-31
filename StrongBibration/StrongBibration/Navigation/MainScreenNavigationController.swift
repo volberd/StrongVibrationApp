@@ -50,7 +50,9 @@ extension MainTabBarController {
 
     
     private func customizeBarItem() {
-        tabBar.layer.cornerRadius = 20.sizeH
+        let cornerRadius: CGFloat = 20.sizeH
+        tabBar.layer.cornerRadius = cornerRadius
+        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         tabBar.backgroundColor = .theme(.tabBarPink)
         tabBar.tintColor = .white
         tabBar.unselectedItemTintColor = .theme(.white)
