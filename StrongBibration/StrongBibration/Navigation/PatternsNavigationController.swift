@@ -9,7 +9,7 @@ import UIKit
 
 class PatternsNavigationController: UINavigationController {
     init() {
-        let mainScreenVC = FirstViewController()
+        let mainScreenVC = PatternsViewController()
         super.init(rootViewController: mainScreenVC)
         initNavigationController()
     }

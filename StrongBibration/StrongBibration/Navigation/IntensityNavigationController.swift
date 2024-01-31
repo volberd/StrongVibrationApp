@@ -9,7 +9,7 @@ import UIKit
 
 class IntensityNavigationController: UINavigationController {
     init() {
-        let mainScreenVC = SecondViewController()
+        let mainScreenVC = IntencityVIewController()
         super.init(rootViewController: mainScreenVC)
         initNavigationController()
     }
@@ -28,9 +28,8 @@ extension IntensityNavigationController {
     private func initNavigationController() {
         let mainTabBarItem = UITabBarItem(
             title: "Intensity",
-            image: UIImage(named: "patternsIcon"),
-            selectedImage: UIImage(named: "patternsIcon"))
-        
+            image: UIImage(named: "intencityIcon"),
+            selectedImage: UIImage(named: "intencityIcon"))
         self.tabBarItem = mainTabBarItem
     }
 }

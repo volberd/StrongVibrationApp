@@ -9,7 +9,7 @@ import UIKit
 
 class SettingsNavigationController: UINavigationController {
     init() {
-        let mainScreenVC = ViewController()
+        let mainScreenVC = SettingsViewController()
         super.init(rootViewController: mainScreenVC)
         initNavigationController()
     }

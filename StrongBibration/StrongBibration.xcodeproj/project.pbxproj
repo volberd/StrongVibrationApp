@@ -10,7 +10,6 @@
 		37A11BC1A9F3F094A9932E51 /* Pods_StrongBibration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D887EB9DC490C9B5C8DB680 /* Pods_StrongBibration.framework */; };
 		BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A35B2B691F25000E334E /* AppDelegate.swift */; };
 		BD22A35E2B691F25000E334E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A35D2B691F25000E334E /* SceneDelegate.swift */; };
-		BD22A3602B691F25000E334E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A35F2B691F25000E334E /* ViewController.swift */; };
 		BD22A3652B691F28000E334E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD22A3642B691F28000E334E /* Assets.xcassets */; };
 		BD22A3682B691F28000E334E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD22A3662B691F28000E334E /* LaunchScreen.storyboard */; };
 		BD22A3712B6921D2000E334E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD22A3702B6921D2000E334E /* SnapKit */; };
@@ -23,6 +22,12 @@
 		BD7B445C2B6A4CAF00ECD736 /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B445B2B6A4CAF00ECD736 /* SettingsNavigationController.swift */; };
 		BD7B445E2B6A51E600ECD736 /* PatternsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B445D2B6A51E600ECD736 /* PatternsNavigationController.swift */; };
 		BD7B44602B6A525B00ECD736 /* IntensityNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B445F2B6A525B00ECD736 /* IntensityNavigationController.swift */; };
+		BD7B446E2B6A542900ECD736 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B446D2B6A542900ECD736 /* SettingsViewController.swift */; };
+		BD7B44702B6A546E00ECD736 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B446F2B6A546E00ECD736 /* SettingsView.swift */; };
+		BD7B44722B6A548200ECD736 /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44712B6A548200ECD736 /* PatternsViewController.swift */; };
+		BD7B44742B6A548E00ECD736 /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44732B6A548E00ECD736 /* PatternsView.swift */; };
+		BD7B44762B6A54A100ECD736 /* IntencityVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44752B6A54A100ECD736 /* IntencityVIewController.swift */; };
+		BD7B44782B6A54B200ECD736 /* IntencityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44772B6A54B200ECD736 /* IntencityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +37,6 @@
 		BD22A3582B691F25000E334E /* StrongBibration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrongBibration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD22A35B2B691F25000E334E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD22A35D2B691F25000E334E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD22A35F2B691F25000E334E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD22A3642B691F28000E334E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD22A3672B691F28000E334E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD22A3692B691F28000E334E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +48,12 @@
 		BD7B445B2B6A4CAF00ECD736 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
 		BD7B445D2B6A51E600ECD736 /* PatternsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsNavigationController.swift; sourceTree = "<group>"; };
 		BD7B445F2B6A525B00ECD736 /* IntensityNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntensityNavigationController.swift; sourceTree = "<group>"; };
+		BD7B446D2B6A542900ECD736 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BD7B446F2B6A546E00ECD736 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BD7B44712B6A548200ECD736 /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
+		BD7B44732B6A548E00ECD736 /* PatternsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsView.swift; sourceTree = "<group>"; };
+		BD7B44752B6A54A100ECD736 /* IntencityVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntencityVIewController.swift; sourceTree = "<group>"; };
+		BD7B44772B6A54B200ECD736 /* IntencityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntencityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +114,6 @@
 				BD22A3742B6921DA000E334E /* Resourses */,
 				BD22A35B2B691F25000E334E /* AppDelegate.swift */,
 				BD22A35D2B691F25000E334E /* SceneDelegate.swift */,
-				BD22A35F2B691F25000E334E /* ViewController.swift */,
 			);
 			path = StrongBibration;
 			sourceTree = "<group>";
@@ -122,6 +131,9 @@
 		BD22A3752B692BEF000E334E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BD7B44692B6A53F600ECD736 /* IntencityScreen */,
+				BD7B44652B6A53D800ECD736 /* PatternsScreen */,
+				BD7B44612B6A53B800ECD736 /* SettingsScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -154,6 +166,105 @@
 				BD7B445F2B6A525B00ECD736 /* IntensityNavigationController.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		BD7B44612B6A53B800ECD736 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44642B6A53CF00ECD736 /* Controller */,
+				BD7B44632B6A53CA00ECD736 /* View */,
+				BD7B44622B6A53C500ECD736 /* Model */,
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		BD7B44622B6A53C500ECD736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD7B44632B6A53CA00ECD736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B446F2B6A546E00ECD736 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD7B44642B6A53CF00ECD736 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B446D2B6A542900ECD736 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD7B44652B6A53D800ECD736 /* PatternsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44682B6A53EB00ECD736 /* Controller */,
+				BD7B44672B6A53E600ECD736 /* View */,
+				BD7B44662B6A53E100ECD736 /* Model */,
+			);
+			path = PatternsScreen;
+			sourceTree = "<group>";
+		};
+		BD7B44662B6A53E100ECD736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD7B44672B6A53E600ECD736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44732B6A548E00ECD736 /* PatternsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD7B44682B6A53EB00ECD736 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44712B6A548200ECD736 /* PatternsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD7B44692B6A53F600ECD736 /* IntencityScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B446C2B6A540D00ECD736 /* Controller */,
+				BD7B446B2B6A540800ECD736 /* View */,
+				BD7B446A2B6A540200ECD736 /* Model */,
+			);
+			path = IntencityScreen;
+			sourceTree = "<group>";
+		};
+		BD7B446A2B6A540200ECD736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD7B446B2B6A540800ECD736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44772B6A54B200ECD736 /* IntencityView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD7B446C2B6A540D00ECD736 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44752B6A54A100ECD736 /* IntencityVIewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,14 +391,19 @@
 				BD22A3822B699BB5000E334E /* MainScreenNavigationController.swift in Sources */,
 				BD22A37F2B699880000E334E /* UIVIew + ext.swift in Sources */,
 				BD22A37B2B6996E3000E334E /* Double + ext.swift in Sources */,
-				BD22A3602B691F25000E334E /* ViewController.swift in Sources */,
+				BD7B44722B6A548200ECD736 /* PatternsViewController.swift in Sources */,
 				BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */,
 				BD7B445C2B6A4CAF00ECD736 /* SettingsNavigationController.swift in Sources */,
 				BD7B445E2B6A51E600ECD736 /* PatternsNavigationController.swift in Sources */,
+				BD7B44742B6A548E00ECD736 /* PatternsView.swift in Sources */,
 				BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */,
 				BD7B44602B6A525B00ECD736 /* IntensityNavigationController.swift in Sources */,
 				BD22A3792B6994D1000E334E /* SizeHelper.swift in Sources */,
 				BD22A35E2B691F25000E334E /* SceneDelegate.swift in Sources */,
+				BD7B44782B6A54B200ECD736 /* IntencityView.swift in Sources */,
+				BD7B446E2B6A542900ECD736 /* SettingsViewController.swift in Sources */,
+				BD7B44762B6A54A100ECD736 /* IntencityVIewController.swift in Sources */,
+				BD7B44702B6A546E00ECD736 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
