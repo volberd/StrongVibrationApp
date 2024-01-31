@@ -43,10 +43,11 @@ class MainTabBarController: UITabBarController {
 extension MainTabBarController {
     private func initBarController() {
         initNavigationController()
-        selectedIndex = 0
+        selectedIndex = viewControllers?.firstIndex(where: { $0 is IntensityNavigationController }) ?? 0
         setupActiveBar()
         self.delegate = self
     }
+
     
     private func customizeBarItem() {
         tabBar.layer.cornerRadius = 20.sizeH

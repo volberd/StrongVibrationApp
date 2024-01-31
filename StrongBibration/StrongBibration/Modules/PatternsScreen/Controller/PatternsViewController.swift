@@ -9,8 +9,15 @@ import UIKit
 
 class PatternsViewController: UIViewController {
 
+    private let mainView = PatternsView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
+
+    }
+    
+    override func loadView() {
+        super.loadView()
+        view = mainView
     }
 }

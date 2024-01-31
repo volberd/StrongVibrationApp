@@ -8,9 +8,15 @@
 import UIKit
 
 class IntencityVIewController: UIViewController {
+    private let mainView = IntensityView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+
+    }
+    
+    override func loadView() {
+        super.loadView()
+        view = mainView
     }
 }

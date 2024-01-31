@@ -14,6 +14,8 @@ extension UIColor {
         case lightPink
         case darkPink
         case tabBarPink
+        case darkGradientPink
+        case lightGradientPink
     }
     
     static func theme(_ colorType: ColorType) -> UIColor {
@@ -28,6 +30,10 @@ extension UIColor {
             color = UIColor(named: "darkPink")
         case .tabBarPink:
             color = UIColor(named: "tabBarPink")
+        case .darkGradientPink:
+            color = UIColor(named: "darkGradientPink")
+        case .lightGradientPink:
+            color = UIColor(named: "lightGradientPink")
         }
         
         guard let color = color else {

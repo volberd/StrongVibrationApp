@@ -10,9 +10,15 @@ import SnapKit
 
 
 class SettingsViewController: UIViewController {
+    private let mainView = SettingsView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+
+    }
+    
+    override func loadView() {
+        super.loadView()
+        view = mainView
     }
 }
