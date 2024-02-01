@@ -18,7 +18,7 @@ class PaywallView: UIView {
         return gradient
     }()
     
-    private let closeButton: UIButton = {
+     let closeButton: UIButton = {
        let obj = UIButton()
         obj.setBackgroundImage(UIImage(named: "closeIcon"), for: .normal)
         return obj
@@ -48,7 +48,7 @@ class PaywallView: UIView {
         return obj
     }()
     
-    private let activateButton: UIButton = {
+     let activateButton: UIButton = {
        let obj = UIButton()
         obj.setBackgroundImage(UIImage(named: "subscriptionButton"), for: .normal)
         obj.setTitle("TRY FOR FREE", for: .normal)
@@ -161,15 +161,15 @@ class PaywallView: UIView {
         }
         
         noAddsLabel.snp.makeConstraints { make in
-            make.height.equalTo(36.sizeH)
+            make.height.equalTo(40.sizeH)
         }
         
         allMusicLabel.snp.makeConstraints { make in
-            make.height.equalTo(36.sizeH)
+            make.height.equalTo(40.sizeH)
         }
         
         allVibrationLabel.snp.makeConstraints { make in
-            make.height.equalTo(36.sizeH)
+            make.height.equalTo(40.sizeH)
         }
     }
     

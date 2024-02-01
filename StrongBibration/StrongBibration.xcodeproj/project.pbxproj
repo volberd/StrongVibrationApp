@@ -40,6 +40,7 @@
 		BD7B449E2B6A922E00ECD736 /* FloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B449D2B6A922E00ECD736 /* FloatingPoint.swift */; };
 		BD7B44A12B6A976B00ECD736 /* ListPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A02B6A976B00ECD736 /* ListPaywallView.swift */; };
 		BD7B44A32B6A992900ECD736 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A22B6A992900ECD736 /* PaywallView.swift */; };
+		BD7B44A62B6BD3D400ECD736 /* BlockSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A52B6BD3D400ECD736 /* BlockSettingsButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		BD7B449D2B6A922E00ECD736 /* FloatingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPoint.swift; sourceTree = "<group>"; };
 		BD7B44A02B6A976B00ECD736 /* ListPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPaywallView.swift; sourceTree = "<group>"; };
 		BD7B44A22B6A992900ECD736 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		BD7B44A52B6BD3D400ECD736 /* BlockSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockSettingsButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 		BD7B44632B6A53CA00ECD736 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD7B44A42B6BD3BE00ECD736 /* Content */,
 				BD7B446F2B6A546E00ECD736 /* SettingsView.swift */,
 			);
 			path = View;
@@ -370,6 +373,14 @@
 			path = Content;
 			sourceTree = "<group>";
 		};
+		BD7B44A42B6BD3BE00ECD736 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				BD7B44A52B6BD3D400ECD736 /* BlockSettingsButton.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -470,6 +481,7 @@
 				BD22A35E2B691F25000E334E /* SceneDelegate.swift in Sources */,
 				BD7B448E2B6A8F2000ECD736 /* SubscriptionsModel.swift in Sources */,
 				BD7B44A32B6A992900ECD736 /* PaywallView.swift in Sources */,
+				BD7B44A62B6BD3D400ECD736 /* BlockSettingsButton.swift in Sources */,
 				BD7B44782B6A54B200ECD736 /* IntencityView.swift in Sources */,
 				BD7B446E2B6A542900ECD736 /* SettingsViewController.swift in Sources */,
 				BD7B44762B6A54A100ECD736 /* IntencityVIewController.swift in Sources */,

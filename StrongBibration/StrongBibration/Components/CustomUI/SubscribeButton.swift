@@ -19,12 +19,13 @@ class PaywallButton: UIButton {
 
     let icon: UIImageView = {
         let obj = UIImageView()
+        obj.contentMode = .scaleAspectFit
         return obj
     }()
     
     let title: UILabel = {
         let obj = UILabel()
-        obj.font = .systemFont(ofSize: 17.sizeH, weight: .bold)
+        obj.font = .systemFont(ofSize: 17.sizeH, weight: .heavy)
         obj.textColor = .white
         return obj
     }()
@@ -50,7 +51,8 @@ class PaywallButton: UIButton {
         addSubview(title)
         
         icon.snp.makeConstraints { make in
-            make.size.equalTo(28.sizeH)
+            make.height.equalTo(28.sizeH)
+            make.width.equalTo(22.sizeH)
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().inset(16.sizeW)
         }

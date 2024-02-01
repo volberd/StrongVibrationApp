@@ -51,8 +51,8 @@ class NewPaywallViewController: UIViewController {
 //        mainView.termsButton.addTarget(self, action: #selector(policyTapped), for: .touchUpInside)
 //        mainView.restoreButton.addTarget(self, action: #selector(restoreTapped), for: .touchUpInside)
 //        
-//        mainView.closeButton.addTarget(self, action: #selector(closeViewController(_:)), for: .touchUpInside)
-//        mainView.activateButton.addTarget(self, action: #selector(buyAdblocker), for: .touchUpInside)
+        mainView.closeButton.addTarget(self, action: #selector(closeViewController(_:)), for: .touchUpInside)
+        mainView.activateButton.addTarget(self, action: #selector(buyAdblocker), for: .touchUpInside)
     }
     
     private func updateSubscriptionLabels() {
@@ -136,7 +136,7 @@ extension NewPaywallViewController {
             return
         }
 
-        if let adblockerProduct = storeKitManager.storeProducts.first(where: { $0.id == SubscriptionsModel.subscriptionInfo["adBlocker"]}) {
+        if let adblockerProduct = storeKitManager.storeProducts.first(where: { $0.id == SubscriptionsModel.subscriptionInfo["strongVibration"]}) {
             do {
                 if let transaction = try await storeKitManager.purchase(adblockerProduct) {
                     CachingManager.shared.expirationDate = transaction.expirationDate?.timeIntervalSince1970 ?? 0
