@@ -9,13 +9,25 @@ import UIKit
 import SnapKit
 
 class PatternsView: UIView {
+    private let containerView: UIView = {
+       let obj = UIView()
+        obj.backgroundColor = .theme(.patternPink)
+        obj.layer.borderColor = UIColor.white.cgColor
+        obj.layer.borderWidth = 1
+        obj.layer.cornerRadius = 30
+        return obj
+    }()
     
-    private let gradientLayer: CAGradientLayer = {
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.theme(.darkGradientPink).cgColor, UIColor.theme(.darkGradientPink).cgColor, UIColor.theme(.lightGradientPink).cgColor]
-        gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
-        gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
-        return gradient
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 19, bottom: 0, right: 19)
+        let obj = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        obj.isPagingEnabled = true
+        obj.backgroundColor = .clear
+        obj.setCollectionViewLayout(layout, animated: true)
+        obj.showsHorizontalScrollIndicator = false
+        return obj
     }()
     
     override init(frame: CGRect) {
@@ -28,11 +40,19 @@ class PatternsView: UIView {
     }
     
     private func setup() {
-        layer.addSublayer(gradientLayer)
+        addSubview(containerView)
+        containerView.addSubview(collectionView)
+        
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(8.sizeH)
+        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        gradientLayer.frame = bounds
     }
 }

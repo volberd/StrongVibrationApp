@@ -16,12 +16,18 @@ class IntensityView: UIView {
         return !pulseLayers.isEmpty
     }
     
-    private let gradientLayer: CAGradientLayer = {
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.theme(.darkGradientPink).cgColor, UIColor.theme(.darkGradientPink).cgColor, UIColor.theme(.lightGradientPink).cgColor]
-        gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
-        gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
-        return gradient
+    //    private let gradientLayer: CAGradientLayer = {
+    //        let gradient = CAGradientLayer()
+    //        gradient.colors = [UIColor.theme(.darkGradientPink).cgColor, UIColor.theme(.darkGradientPink).cgColor, UIColor.theme(.lightGradientPink).cgColor]
+    //        gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
+    //        gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
+    //        return gradient
+    //    }()
+    
+    private lazy var backgroundImage: UIImageView = {
+        let obj = UIImageView()
+        obj.image = UIImage(named: "baseBackgroundImage")
+        return obj
     }()
     
     private lazy var notVibrationLabel: UILabel = {
@@ -43,6 +49,41 @@ class IntensityView: UIView {
         let button = UIButton()
         button.setBackgroundImage(UIImage(named: "lockButton"), for: .normal)
         return button
+    }()
+    
+    private let softLabel: UILabel = {
+       let obj = UILabel()
+        obj.text = "Soft"
+        obj.font = .systemFont(ofSize: 14, weight: .medium)
+        obj.textColor = .white
+        return obj
+    }()
+    
+    private let hardLabel: UILabel = {
+       let obj = UILabel()
+        obj.text = "Hard"
+        obj.font = .systemFont(ofSize: 14, weight: .medium)
+        obj.textColor = .white
+        return obj
+    }()
+    
+    private let customSlider: Slider = {
+        let obj = Slider()
+        obj.backgroundColor = .clear
+        return obj
+    }()
+    
+    private lazy var pinkShadowImageView: UIImageView = {
+        let obj = UIImageView()
+        obj.isHidden = true
+        obj.image = UIImage(named: "pinkShadow")
+        return obj
+    }()
+    
+    private lazy var sliderImageView: UIImageView = {
+       let obj = UIImageView()
+        obj.image = UIImage(named: "sliderImage")
+        return obj
     }()
     
     lazy var vibrateButton: UIButton = {
@@ -69,16 +110,25 @@ class IntensityView: UIView {
     }
     
     private func setupSubviews() {
-        layer.addSublayer(gradientLayer)
+        addSubview(backgroundImage)
+        addSubview(sliderImageView)
+        addSubview(pinkShadowImageView)
         addSubview(notVibrationLabel)
         addSubview(musicButton)
         addSubview(lockButton)
         addSubview(waveView)
         addSubview(vibrateButton)
-        
+        addSubview(customSlider)
+        addSubview(softLabel)
+        addSubview(hardLabel)
+       
     }
     
     private func setupConstraints() {
+        backgroundImage.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         musicButton.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(buttonInset)
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
@@ -102,21 +152,48 @@ class IntensityView: UIView {
             make.top.equalTo(notVibrationLabel.snp.bottom).offset(68.sizeH)
         }
         
+        pinkShadowImageView.snp.makeConstraints { make in
+            make.size.equalTo(300.sizeH)
+            make.center.equalTo(vibrateButton.snp.center)
+        }
+        
         waveView.snp.makeConstraints { make in
             make.size.equalTo(146.sizeH)
             make.center.equalTo(vibrateButton.snp.center)
+        }
+        
+        sliderImageView.snp.makeConstraints { make in
+            make.height.equalTo(10.sizeH)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-133.sizeH)
+            make.leading.trailing.equalToSuperview().inset(39.sizeW)
+        }
+        
+        customSlider.snp.makeConstraints { make in
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-129.sizeH)
+            make.leading.trailing.equalToSuperview().inset(39.sizeW)
+        }
+        
+        softLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(32.sizeW)
+            make.bottom.equalTo(customSlider.snp.top).offset(-8.sizeH)
+        }
+        
+        hardLabel.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().inset(32.sizeW)
+            make.bottom.equalTo(customSlider.snp.top).offset(-8.sizeH)
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        gradientLayer.frame = bounds
+        //        gradientLayer.frame = bounds
     }
     
     func animateWaveView() {
         createPulse()
         
         vibrateButton.setBackgroundImage(UIImage(named: "tapedButton"), for: .normal)
+        pinkShadowImageView.isHidden = false
     }
 }
 
@@ -128,6 +205,7 @@ extension IntensityView {
             layer.removeFromSuperlayer()
         }
         vibrateButton.setBackgroundImage(UIImage(named: "onButton"), for: .normal)
+        pinkShadowImageView.isHidden = true
         pulseLayers.removeAll()
     }
     
@@ -143,7 +221,7 @@ extension IntensityView {
             waveView.layer.addSublayer(pulseLayer)
             pulseLayers.append(pulseLayer)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
             self.animatePulse(index: 0)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 self.animatePulse(index: 1)
@@ -177,3 +255,4 @@ extension IntensityView {
         pulseLayers[index].add(opacityAnimation, forKey: "opacity")
     }
 }
+

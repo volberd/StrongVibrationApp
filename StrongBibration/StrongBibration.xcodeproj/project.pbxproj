@@ -43,6 +43,9 @@
 		BD7B44A62B6BD3D400ECD736 /* BlockSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A52B6BD3D400ECD736 /* BlockSettingsButton.swift */; };
 		BDB5890D2B6D899D00F50E14 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5890C2B6D899C00F50E14 /* MusicViewController.swift */; };
 		BDB5890F2B6D89C200F50E14 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5890E2B6D89C200F50E14 /* MusicView.swift */; };
+		BDB589172B6E4C2C00F50E14 /* Reusable + Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589162B6E4C2C00F50E14 /* Reusable + Cell.swift */; };
+		BDB5891A2B6E4C9600F50E14 /* PatternCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589192B6E4C9600F50E14 /* PatternCollectionViewCell.swift */; };
+		BDB5891D2B6E6BC400F50E14 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		BD7B44A52B6BD3D400ECD736 /* BlockSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockSettingsButton.swift; sourceTree = "<group>"; };
 		BDB5890C2B6D899C00F50E14 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		BDB5890E2B6D89C200F50E14 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
+		BDB589162B6E4C2C00F50E14 /* Reusable + Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable + Cell.swift"; sourceTree = "<group>"; };
+		BDB589192B6E4C9600F50E14 /* PatternCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,8 @@
 		BD22A3762B699437000E334E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BDB5891B2B6E6BAD00F50E14 /* CustomUI */,
+				BDB589152B6E4C1700F50E14 /* Protocols */,
 				BD7B44962B6A91BE00ECD736 /* Helpers */,
 				BD22A3772B6994B9000E334E /* Extension */,
 			);
@@ -243,6 +251,7 @@
 		BD7B44672B6A53E600ECD736 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDB589182B6E4C8300F50E14 /* CollectionViewCell */,
 				BD7B44732B6A548E00ECD736 /* PatternsView.swift */,
 			);
 			path = View;
@@ -366,6 +375,7 @@
 				BD7B44972B6A91CF00ECD736 /* ProgressHelper.swift */,
 				BD7B44992B6A91E200ECD736 /* ProgressHelperView.swift */,
 				BD7B449B2B6A91F500ECD736 /* ActivityIndicator.swift */,
+				BDB589162B6E4C2C00F50E14 /* Reusable + Cell.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -417,6 +427,29 @@
 				BDB5890C2B6D899C00F50E14 /* MusicViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDB589152B6E4C1700F50E14 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BDB589182B6E4C8300F50E14 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDB589192B6E4C9600F50E14 /* PatternCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		BDB5891B2B6E6BAD00F50E14 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD7B44832B6A77FE00ECD736 /* UIFont + ext.swift in Sources */,
+				BDB5891D2B6E6BC400F50E14 /* CustomSlider.swift in Sources */,
 				BD22A3822B699BB5000E334E /* MainScreenNavigationController.swift in Sources */,
 				BD22A37F2B699880000E334E /* UIVIew + ext.swift in Sources */,
 				BD7B449A2B6A91E200ECD736 /* ProgressHelperView.swift in Sources */,
@@ -511,6 +545,7 @@
 				BD7B44982B6A91CF00ECD736 /* ProgressHelper.swift in Sources */,
 				BD7B445E2B6A51E600ECD736 /* PatternsNavigationController.swift in Sources */,
 				BD7B44742B6A548E00ECD736 /* PatternsView.swift in Sources */,
+				BDB589172B6E4C2C00F50E14 /* Reusable + Cell.swift in Sources */,
 				BD7B449E2B6A922E00ECD736 /* FloatingPoint.swift in Sources */,
 				BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */,
 				BD7B44912B6A903200ECD736 /* CachingManager.swift in Sources */,
@@ -523,6 +558,7 @@
 				BD7B44A32B6A992900ECD736 /* PaywallView.swift in Sources */,
 				BD7B44A62B6BD3D400ECD736 /* BlockSettingsButton.swift in Sources */,
 				BD7B44782B6A54B200ECD736 /* IntencityView.swift in Sources */,
+				BDB5891A2B6E4C9600F50E14 /* PatternCollectionViewCell.swift in Sources */,
 				BD7B446E2B6A542900ECD736 /* SettingsViewController.swift in Sources */,
 				BD7B44762B6A54A100ECD736 /* IntencityVIewController.swift in Sources */,
 				BD7B44952B6A90F700ECD736 /* PaywallViewController.swift in Sources */,
@@ -692,7 +728,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vibrate.massager.massage.app;
+				PRODUCT_BUNDLE_IDENTIFIER = dsfwed.dssdfsd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -720,7 +756,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vibrate.massager.massage.app;
+				PRODUCT_BUNDLE_IDENTIFIER = dsfwed.dssdfsd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
