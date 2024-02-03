@@ -28,8 +28,8 @@ extension SettingsNavigationController {
     private func initNavigationController() {
         let mainTabBarItem = UITabBarItem(
             title: "Settings",
-            image: UIImage(named: "gearIcon"),
-            selectedImage: UIImage(named: "HintsItem"))
+            image: UIImage(named: ""),
+            selectedImage: UIImage(named: ""))
         
         self.tabBarItem = mainTabBarItem
     }

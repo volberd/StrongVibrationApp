@@ -28,8 +28,8 @@ extension IntensityNavigationController {
     private func initNavigationController() {
         let mainTabBarItem = UITabBarItem(
             title: "Intensity",
-            image: UIImage(named: "intencityIcon"),
-            selectedImage: UIImage(named: "intencityIcon"))
+            image: UIImage(named: ""),
+            selectedImage: UIImage(named: ""))
         self.tabBarItem = mainTabBarItem
     }
 }

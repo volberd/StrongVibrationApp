@@ -9,6 +9,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     private let bubbleTabBar = BubbleTabBar()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,17 +31,18 @@ class MainTabBarController: UITabBarController {
         viewControllers = [mainSettingsNavigationVC, mainIntensityNavigationVC, mainPatternsNavigationVC]
     }
     
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        let tabBarHeight: CGFloat = 49 // Установите нужную высоту таб-бара
+        let tabBarHeight: CGFloat = 80.sizeH // Установите нужную высоту таб-бара
         bubbleTabBar.frame = CGRect(x: 0, y: view.frame.height - tabBarHeight, width: view.frame.width, height: tabBarHeight)
     }
     
     private func setupBubbleTabBar() {
         let tabs = [
-            BubbleTabBar.Tab(id: "1", tint: .blue, content: .image(uimage: UIImage(systemName: "house")!)),
-            BubbleTabBar.Tab(id: "2", tint: .green, content: .image(uimage: UIImage(systemName: "heart")!)),
-            BubbleTabBar.Tab(id: "3", tint: .red, content: .image(uimage: UIImage(systemName: "gear")!))
+            BubbleTabBar.Tab(id: "1", tint: .white, content: .image(uimage: UIImage(named: "gearIcon")!)),
+            BubbleTabBar.Tab(id: "2", tint: .white, content: .image(uimage: UIImage(named: "intencityIcon")!)),
+            BubbleTabBar.Tab(id: "3", tint: .white, content: .image(uimage: UIImage(named: "patternsIcon")!)),
         ]
         
         bubbleTabBar.show(tabs: tabs)
@@ -153,6 +155,9 @@ class BubbleTabBar: UIView {
     private lazy var ySelectedLocation: CGFloat = -Self.itemWidth/2
     private lazy var yUnselectedLocation: CGFloat = 3*Self.cornerRadius/2
     
+    let gradientLayer = CAGradientLayer()
+   
+    
     /// View that represents the background of the tabBar
     private var backShape: CAShapeLayer = CAShapeLayer()
     
@@ -212,7 +217,7 @@ class BubbleTabBar: UIView {
     func show(tabs: [Tab]) {
         assert(!tabs.isEmpty, "One tab must be set at least")
         self.tabs = tabs
-        selectedTab = tabs.first
+        selectedTab = tabs[1]
         redrawTabBar()
     }
     
@@ -297,7 +302,7 @@ class BubbleTabBar: UIView {
         guard let index = selectedIndex else { return }
         let itemLocation = centerXFor(index)
         backShape.path = backgroundPath(itemLocation).cgPath
-        backShape.fillColor = UIColor.white.cgColor
+        backShape.fillColor = UIColor.theme(.darkPink).cgColor
     }
     
     /**
@@ -496,12 +501,12 @@ private class TabLayer: CAShapeLayer, CAAnimationDelegate {
         self.isSelected = isSelected
         guard animated else {
             transform = isSelected ? selectedTransform : unSelectedTransform
-            backgroundLayer?.fillColor = isSelected ? UIColor.white.cgColor : UIColor.clear.cgColor
-            imageLayer?.backgroundColor = isSelected ? tab.tint.cgColor : UIColor.lightGray.cgColor
+            backgroundLayer?.fillColor = isSelected ? UIColor.theme(.darkPink).cgColor : UIColor.clear.cgColor
+            imageLayer?.backgroundColor = isSelected ? tab.tint.cgColor : UIColor.white.cgColor
             return
         }
         
-        imageLayer?.backgroundColor = isSelected ? tab.tint.cgColor : UIColor.lightGray.cgColor
+        imageLayer?.backgroundColor = isSelected ? tab.tint.cgColor : UIColor.theme(.darkPink).cgColor
         let fromShiftValue = isSelected ? unSelectedTransform : selectedTransform
         let toShiftValue = isSelected ? selectedTransform : unSelectedTransform
         
@@ -514,8 +519,8 @@ private class TabLayer: CAShapeLayer, CAAnimationDelegate {
         moveAnimation.isRemovedOnCompletion = false
         moveAnimation.delegate = self
         
-        let fromBgValue = isSelected ? UIColor.clear.cgColor : UIColor.white.cgColor
-        let toBgValue = isSelected ? UIColor.white.cgColor : UIColor.clear.cgColor
+        let fromBgValue = isSelected ? UIColor.clear.cgColor : UIColor.clear.cgColor
+        let toBgValue = isSelected ? UIColor.clear.cgColor : UIColor.clear.cgColor
         
         let bgAnimation = CABasicAnimation(keyPath: #keyPath(CAShapeLayer.fillColor))
         bgAnimation.duration = Self.animationDuration
