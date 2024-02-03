@@ -63,13 +63,6 @@ class MainTabBarController: UITabBarController {
 }
 
 extension MainTabBarController {
-//    private func initBarController() {
-//        initNavigationController()
-//        selectedIndex = viewControllers?.firstIndex(where: { $0 is IntensityNavigationController }) ?? 0
-//        setupActiveBar()
-//        self.delegate = self
-//    }
-
     
     private func customizeBarItem() {
         let cornerRadius: CGFloat = 20.sizeH
@@ -82,28 +75,6 @@ extension MainTabBarController {
         tabBar.backgroundImage = UIImage()
     }
     
-//    private func initNavigationController() {
-//        customizeBarItem()
-//
-//        let mainSettingsNavigationVC = SettingsNavigationController()
-//        let mainIntensityNavigationVC = IntensityNavigationController()
-//        let mainPatternsNavigationVC = PatternsNavigationController()
-//
-//        viewControllers = [mainSettingsNavigationVC, mainIntensityNavigationVC, mainPatternsNavigationVC]
-//    }
-
-        
-//    private func setupActiveBar() {
-//        let itemWidth = tabBar.frame.width / CGFloat(tabBar.items?.count ?? 1)
-//        let activeBarHeight: CGFloat = 2.0
-//        let activeBarColor: UIColor = .darkPink
-//        let newX = CGFloat(selectedIndex) * itemWidth
-//        activeBar = UIView(frame: CGRect(x: 0, y: 0, width: itemWidth - 40.sizeW, height: activeBarHeight))
-//        activeBar.backgroundColor = activeBarColor
-//        tabBar.addSubview(activeBar)
-//        activeBar.frame.origin.x = newX + 20.sizeW
-//    }
-    
     private func presentPatternsViewControllerModally() {
         let patternsViewController = PatternsViewController() // Создание экземпляра PatternsViewController
         let navigationController = UINavigationController(rootViewController: patternsViewController) // Обертка в UINavigationController (если необходимо)
@@ -115,31 +86,7 @@ extension MainTabBarController {
 }
 
 extension MainTabBarController: UITabBarControllerDelegate {
-//    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-//        feedbackGenerator.impactOccurred()
-//        let itemWidth = tabBar.frame.width / CGFloat(tabBar.items?.count ?? 1)
-//        let selectedIndex = tabBarController.selectedIndex
-//        self.selectedItem = selectedIndex
-//        let newX = CGFloat(selectedIndex) * itemWidth
-//        UIView.animate(withDuration: 0.3) {
-//            self.activeBar.frame.origin.x = newX + 20.sizeW
-//        }
-//        tabBar.bringSubviewToFront(activeBar)
-//
-//        if let navigationController = viewController as? UINavigationController {
-//            navigationController.popToRootViewController(animated: false)
-//        }
-//    }
-    
-//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//        
-//        if viewController is PatternsNavigationController {
-//            presentPatternsViewControllerModally()
-//            return false
-//        } else {
-//            return true
-//        }
-//    }
+
 }
 
 
@@ -200,11 +147,13 @@ class BubbleTabBar: UIView {
         
         let clickableRadius = 2*Self.itemWidth
         for i in 0..<tabs.count {
-            let center = centerXFor(i)
-            let clickableArea = (center-clickableRadius)...(center+clickableRadius)
-            if clickableArea.contains(location.x) {
-                selectAnimation(i, animated: true)
-                return
+            if i < 2 {
+                let center = centerXFor(i)
+                let clickableArea = (center-clickableRadius)...(center+clickableRadius)
+                if clickableArea.contains(location.x) {
+                    selectAnimation(i, animated: true)
+                    return
+                }
             }
         }
     }
@@ -261,9 +210,18 @@ class BubbleTabBar: UIView {
     
     private func baseRedraw() {
         backShape.frame = bounds
-        backShape.cornerRadius = Self.cornerRadius
-        backShape.masksToBounds = true
+        
+        // Создаем маску для закругления углов
+        let maskPath = UIBezierPath(roundedRect: backShape.bounds,
+                                    byRoundingCorners: [.topLeft, .topRight],
+                                    cornerRadii: CGSize(width: 30, height: 30))
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = maskPath.cgPath
+        backShape.mask = maskLayer
+        
+        backShape.fillColor = UIColor.theme(.darkPink).cgColor
     }
+
     
     /**
      Clean the current tabs and redraw the new ones
@@ -506,7 +464,7 @@ private class TabLayer: CAShapeLayer, CAAnimationDelegate {
             return
         }
         
-        imageLayer?.backgroundColor = isSelected ? tab.tint.cgColor : UIColor.theme(.darkPink).cgColor
+        imageLayer?.backgroundColor = isSelected ? tab.tint.cgColor : UIColor.theme(.lightPink).cgColor
         let fromShiftValue = isSelected ? unSelectedTransform : selectedTransform
         let toShiftValue = isSelected ? selectedTransform : unSelectedTransform
         

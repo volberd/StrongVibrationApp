@@ -46,6 +46,7 @@
 		BDB589172B6E4C2C00F50E14 /* Reusable + Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589162B6E4C2C00F50E14 /* Reusable + Cell.swift */; };
 		BDB5891A2B6E4C9600F50E14 /* PatternCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589192B6E4C9600F50E14 /* PatternCollectionViewCell.swift */; };
 		BDB5891D2B6E6BC400F50E14 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */; };
+		BDB5891F2B6EC63000F50E14 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		BDB589162B6E4C2C00F50E14 /* Reusable + Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable + Cell.swift"; sourceTree = "<group>"; };
 		BDB589192B6E4C9600F50E14 /* PatternCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */,
+				BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				BD7B445E2B6A51E600ECD736 /* PatternsNavigationController.swift in Sources */,
 				BD7B44742B6A548E00ECD736 /* PatternsView.swift in Sources */,
 				BDB589172B6E4C2C00F50E14 /* Reusable + Cell.swift in Sources */,
+				BDB5891F2B6EC63000F50E14 /* CustomTabBar.swift in Sources */,
 				BD7B449E2B6A922E00ECD736 /* FloatingPoint.swift in Sources */,
 				BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */,
 				BD7B44912B6A903200ECD736 /* CachingManager.swift in Sources */,

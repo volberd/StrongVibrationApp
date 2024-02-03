@@ -16,14 +16,6 @@ class IntensityView: UIView {
         return !pulseLayers.isEmpty
     }
     
-    //    private let gradientLayer: CAGradientLayer = {
-    //        let gradient = CAGradientLayer()
-    //        gradient.colors = [UIColor.theme(.darkGradientPink).cgColor, UIColor.theme(.darkGradientPink).cgColor, UIColor.theme(.lightGradientPink).cgColor]
-    //        gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
-    //        gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
-    //        return gradient
-    //    }()
-    
     private lazy var backgroundImage: UIImageView = {
         let obj = UIImageView()
         obj.image = UIImage(named: "baseBackgroundImage")
