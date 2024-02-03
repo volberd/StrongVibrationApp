@@ -85,6 +85,11 @@ class IntensityView: UIView {
         
     }()
     
+    let segmentedControl: CustomSegmentedControl  = {
+        let obj = CustomSegmentedControl(items: ChooseModelControl.allCases.map({$0.title}))
+        return obj
+    }()
+    
     private lazy var waveView: UIView = {
         let obj = UIView()
         
@@ -113,7 +118,7 @@ class IntensityView: UIView {
         addSubview(customSlider)
         addSubview(softLabel)
         addSubview(hardLabel)
-       
+        addSubview(segmentedControl)
     }
     
     private func setupConstraints() {
@@ -173,6 +178,12 @@ class IntensityView: UIView {
         hardLabel.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(32.sizeW)
             make.bottom.equalTo(customSlider.snp.top).offset(-8.sizeH)
+        }
+        
+        segmentedControl.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(60.sizeW)
+            make.height.equalTo(40.sizeH)
+            make.bottom.equalTo(hardLabel.snp.top).offset(-40.sizeH)
         }
     }
     
@@ -248,3 +259,21 @@ extension IntensityView {
     }
 }
 
+
+enum ChooseModelControl: CaseIterable {
+    case slow
+    case medium
+    case fast
+    
+    var title: String {
+        switch self {
+       
+        case .slow:
+            return "Slow"
+        case .medium:
+            return "Medium"
+        case .fast:
+            return "Fast"
+        }
+    }
+}

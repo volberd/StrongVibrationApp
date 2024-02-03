@@ -47,6 +47,7 @@
 		BDB5891A2B6E4C9600F50E14 /* PatternCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589192B6E4C9600F50E14 /* PatternCollectionViewCell.swift */; };
 		BDB5891D2B6E6BC400F50E14 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */; };
 		BDB5891F2B6EC63000F50E14 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */; };
+		BDB589212B6ED73000F50E14 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589202B6ED73000F50E14 /* SegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		BDB589192B6E4C9600F50E14 /* PatternCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		BDB589202B6ED73000F50E14 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -451,6 +453,7 @@
 			children = (
 				BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */,
 				BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */,
+				BDB589202B6ED73000F50E14 /* SegmentedControl.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				BDB5890D2B6D899D00F50E14 /* MusicViewController.swift in Sources */,
 				BD7B44722B6A548200ECD736 /* PatternsViewController.swift in Sources */,
 				BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */,
+				BDB589212B6ED73000F50E14 /* SegmentedControl.swift in Sources */,
 				BD7B44882B6A86AC00ECD736 /* SubscribeButton.swift in Sources */,
 				BD7B445C2B6A4CAF00ECD736 /* SettingsNavigationController.swift in Sources */,
 				BD7B44982B6A91CF00ECD736 /* ProgressHelper.swift in Sources */,

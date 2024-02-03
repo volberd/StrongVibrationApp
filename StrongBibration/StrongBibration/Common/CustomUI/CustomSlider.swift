@@ -90,7 +90,7 @@ final class ThumbView: UIView {
     }
     
     private func setup() {
-        backgroundColor = UIColor(red: 183 / 255, green: 122 / 255, blue: 231 / 255, alpha: 1)
+        backgroundColor = UIColor.theme(.darkPink)
         let thumbSize = frame.width * 1.5
         let middleView = UIView(frame: CGRect(x: 0, y: 0, width: thumbSize, height: thumbSize))
         middleView.center = CGPoint(x: frame.width / 2, y: frame.height / 2)
