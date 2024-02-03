@@ -9,7 +9,7 @@ import UIKit
 
 class IntensityNavigationController: UINavigationController {
     init() {
-        let mainScreenVC = IntencityVIewController()
+        let mainScreenVC = IntensityViewController()
         super.init(rootViewController: mainScreenVC)
         initNavigationController()
     }

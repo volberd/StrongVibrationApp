@@ -10,6 +10,7 @@ import UIKit
 class MainTabBarController: UITabBarController {
     private var isPreviusControllerNeedToChange = true
     private let gradientlayer = CAGradientLayer()
+    private var selectedItem = 1
     
     var activeBar: UIView = {
         let obj = UIView()
@@ -25,7 +26,7 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initBarController()
-        
+        self.tabBarController?.delegate = self
         setGradientBackground(colorOne: .theme(.darkPink), colorTwo: .theme(.tabBarPink))
     }
     
@@ -81,6 +82,10 @@ extension MainTabBarController {
         tabBar.addSubview(activeBar)
         activeBar.frame.origin.x = newX + 20.sizeW
     }
+    
+    private func presentPatternsViewControllerModally() {
+          
+       }
 }
 
 extension MainTabBarController: UITabBarControllerDelegate {
@@ -88,6 +93,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
         feedbackGenerator.impactOccurred()
         let itemWidth = tabBar.frame.width / CGFloat(tabBar.items?.count ?? 1)
         let selectedIndex = tabBarController.selectedIndex
+        self.selectedItem = selectedIndex
         let newX = CGFloat(selectedIndex) * itemWidth
         UIView.animate(withDuration: 0.3) {
             self.activeBar.frame.origin.x = newX + 20.sizeW
@@ -98,4 +104,15 @@ extension MainTabBarController: UITabBarControllerDelegate {
             navigationController.popToRootViewController(animated: false)
         }
     }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        if viewController is PatternsNavigationController {
+            presentPatternsViewControllerModally()
+            return false
+        } else {
+            return true
+        }
+    }
 }
+

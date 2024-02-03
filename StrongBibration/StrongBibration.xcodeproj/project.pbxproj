@@ -41,6 +41,8 @@
 		BD7B44A12B6A976B00ECD736 /* ListPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A02B6A976B00ECD736 /* ListPaywallView.swift */; };
 		BD7B44A32B6A992900ECD736 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A22B6A992900ECD736 /* PaywallView.swift */; };
 		BD7B44A62B6BD3D400ECD736 /* BlockSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A52B6BD3D400ECD736 /* BlockSettingsButton.swift */; };
+		BDB5890D2B6D899D00F50E14 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5890C2B6D899C00F50E14 /* MusicViewController.swift */; };
+		BDB5890F2B6D89C200F50E14 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5890E2B6D89C200F50E14 /* MusicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		BD7B44A02B6A976B00ECD736 /* ListPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPaywallView.swift; sourceTree = "<group>"; };
 		BD7B44A22B6A992900ECD736 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		BD7B44A52B6BD3D400ECD736 /* BlockSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockSettingsButton.swift; sourceTree = "<group>"; };
+		BDB5890C2B6D899C00F50E14 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		BDB5890E2B6D89C200F50E14 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +147,9 @@
 		BD22A3752B692BEF000E334E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BD7B44892B6A8D1200ECD736 /* SubscribeScreen */,
+				BDB589082B6D3C6B00F50E14 /* MusicScreen */,
 				BD7B44692B6A53F600ECD736 /* IntencityScreen */,
+				BD7B44892B6A8D1200ECD736 /* SubscribeScreen */,
 				BD7B44652B6A53D800ECD736 /* PatternsScreen */,
 				BD7B44612B6A53B800ECD736 /* SettingsScreen */,
 			);
@@ -381,6 +386,39 @@
 			path = Content;
 			sourceTree = "<group>";
 		};
+		BDB589082B6D3C6B00F50E14 /* MusicScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BDB5890B2B6D3C8100F50E14 /* Controller */,
+				BDB5890A2B6D3C7B00F50E14 /* View */,
+				BDB589092B6D3C7500F50E14 /* Model */,
+			);
+			path = MusicScreen;
+			sourceTree = "<group>";
+		};
+		BDB589092B6D3C7500F50E14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDB5890A2B6D3C7B00F50E14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDB5890E2B6D89C200F50E14 /* MusicView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDB5890B2B6D3C8100F50E14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDB5890C2B6D899C00F50E14 /* MusicViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -465,6 +503,7 @@
 				BD7B449A2B6A91E200ECD736 /* ProgressHelperView.swift in Sources */,
 				BD7B44A12B6A976B00ECD736 /* ListPaywallView.swift in Sources */,
 				BD22A37B2B6996E3000E334E /* Double + ext.swift in Sources */,
+				BDB5890D2B6D899D00F50E14 /* MusicViewController.swift in Sources */,
 				BD7B44722B6A548200ECD736 /* PatternsViewController.swift in Sources */,
 				BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */,
 				BD7B44882B6A86AC00ECD736 /* SubscribeButton.swift in Sources */,
@@ -475,6 +514,7 @@
 				BD7B449E2B6A922E00ECD736 /* FloatingPoint.swift in Sources */,
 				BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */,
 				BD7B44912B6A903200ECD736 /* CachingManager.swift in Sources */,
+				BDB5890F2B6D89C200F50E14 /* MusicView.swift in Sources */,
 				BD7B44602B6A525B00ECD736 /* IntensityNavigationController.swift in Sources */,
 				BD22A3792B6994D1000E334E /* SizeHelper.swift in Sources */,
 				BD7B449C2B6A91F500ECD736 /* ActivityIndicator.swift in Sources */,
