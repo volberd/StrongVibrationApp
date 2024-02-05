@@ -8,8 +8,7 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-    private let bubbleTabBar = BubbleTabBar()
-
+    let bubbleTabBar = BubbleTabBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -211,10 +210,9 @@ class BubbleTabBar: UIView {
     private func baseRedraw() {
         backShape.frame = bounds
         
-        // Создаем маску для закругления углов
         let maskPath = UIBezierPath(roundedRect: backShape.bounds,
                                     byRoundingCorners: [.topLeft, .topRight],
-                                    cornerRadii: CGSize(width: 30, height: 30))
+                                    cornerRadii: CGSize(width: 30.sizeH, height: 30.sizeH))
         let maskLayer = CAShapeLayer()
         maskLayer.path = maskPath.cgPath
         backShape.mask = maskLayer

@@ -3,4 +3,198 @@
    uuid = "49966154-6CE7-4C74-B2EE-E2A134E1657B"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "040BB123-3901-47FA-8238-C32FBB8C1813"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/MusicScreen/Controller/MusicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "cellForTitlesCollectionView(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "040BB123-3901-47FA-8238-C32FBB8C1813 - e40d423329f12f89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.MusicViewController.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/Controller/MusicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  uuid = "040BB123-3901-47FA-8238-C32FBB8C1813 - c732468a2c25e88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.MusicViewController.cellForTitlesCollectionView(__C.UICollectionView, Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/Controller/MusicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "434">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F8ABC35-3943-46D4-8B9E-0D9426D06F59"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/MusicScreen/Controller/MusicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "cellForTitlesCollectionView(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9F8ABC35-3943-46D4-8B9E-0D9426D06F59 - c732468a2c25eeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.MusicViewController.cellForTitlesCollectionView(__C.UICollectionView, Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/Controller/MusicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "465">
+               </Location>
+               <Location
+                  uuid = "9F8ABC35-3943-46D4-8B9E-0D9426D06F59 - c732468a2c25e88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.MusicViewController.cellForTitlesCollectionView(__C.UICollectionView, Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/Controller/MusicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "434">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7222276A-C681-45A8-A812-6C2CD634A01A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/MusicScreen/Controller/MusicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "cellForTitlesCollectionView(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7222276A-C681-45A8-A812-6C2CD634A01A - e40d423329f12f89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.MusicViewController.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/Controller/MusicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  uuid = "7222276A-C681-45A8-A812-6C2CD634A01A - c732468a2c25d67"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.MusicViewController.cellForTitlesCollectionView(__C.UICollectionView, Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/Controller/MusicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "399">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "214D85CA-D6BF-4AA0-BB9B-5922D6066A39"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/MusicScreen/View/Cell/GenreCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "handleUI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "214D85CA-D6BF-4AA0-BB9B-5922D6066A39 - 972ee0f26c49f995"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.GenreCollectionViewCell.handleUI() -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/View/Cell/GenreCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "170">
+               </Location>
+               <Location
+                  uuid = "214D85CA-D6BF-4AA0-BB9B-5922D6066A39 - 972ee0f26c49f9f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.GenreCollectionViewCell.handleUI() -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/View/Cell/GenreCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "170">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

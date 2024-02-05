@@ -48,6 +48,9 @@
 		BDB5891D2B6E6BC400F50E14 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */; };
 		BDB5891F2B6EC63000F50E14 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */; };
 		BDB589212B6ED73000F50E14 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589202B6ED73000F50E14 /* SegmentedControl.swift */; };
+		BDC4E8202B71279700F684F0 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E81F2B71279700F684F0 /* GenreCollectionViewCell.swift */; };
+		BDC4E8222B7127FF00F684F0 /* GenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8212B7127FF00F684F0 /* GenresModel.swift */; };
+		BDC4E8242B71388200F684F0 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8232B71388200F684F0 /* ListCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,9 @@
 		BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		BDB589202B6ED73000F50E14 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		BDC4E81F2B71279700F684F0 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDC4E8212B7127FF00F684F0 /* GenresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresModel.swift; sourceTree = "<group>"; };
+		BDC4E8232B71388200F684F0 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +419,7 @@
 		BDB589092B6D3C7500F50E14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDC4E8212B7127FF00F684F0 /* GenresModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -420,6 +427,7 @@
 		BDB5890A2B6D3C7B00F50E14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDC4E81E2B71258500F684F0 /* Cell */,
 				BDB5890E2B6D89C200F50E14 /* MusicView.swift */,
 			);
 			path = View;
@@ -456,6 +464,15 @@
 				BDB589202B6ED73000F50E14 /* SegmentedControl.swift */,
 			);
 			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		BDC4E81E2B71258500F684F0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BDC4E81F2B71279700F684F0 /* GenreCollectionViewCell.swift */,
+				BDC4E8232B71388200F684F0 /* ListCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,6 +563,7 @@
 				BDB5890D2B6D899D00F50E14 /* MusicViewController.swift in Sources */,
 				BD7B44722B6A548200ECD736 /* PatternsViewController.swift in Sources */,
 				BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */,
+				BDC4E8242B71388200F684F0 /* ListCollectionViewCell.swift in Sources */,
 				BDB589212B6ED73000F50E14 /* SegmentedControl.swift in Sources */,
 				BD7B44882B6A86AC00ECD736 /* SubscribeButton.swift in Sources */,
 				BD7B445C2B6A4CAF00ECD736 /* SettingsNavigationController.swift in Sources */,
@@ -557,6 +575,7 @@
 				BD7B449E2B6A922E00ECD736 /* FloatingPoint.swift in Sources */,
 				BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */,
 				BD7B44912B6A903200ECD736 /* CachingManager.swift in Sources */,
+				BDC4E8222B7127FF00F684F0 /* GenresModel.swift in Sources */,
 				BDB5890F2B6D89C200F50E14 /* MusicView.swift in Sources */,
 				BD7B44602B6A525B00ECD736 /* IntensityNavigationController.swift in Sources */,
 				BD22A3792B6994D1000E334E /* SizeHelper.swift in Sources */,
@@ -567,6 +586,7 @@
 				BD7B44A62B6BD3D400ECD736 /* BlockSettingsButton.swift in Sources */,
 				BD7B44782B6A54B200ECD736 /* IntencityView.swift in Sources */,
 				BDB5891A2B6E4C9600F50E14 /* PatternCollectionViewCell.swift in Sources */,
+				BDC4E8202B71279700F684F0 /* GenreCollectionViewCell.swift in Sources */,
 				BD7B446E2B6A542900ECD736 /* SettingsViewController.swift in Sources */,
 				BD7B44762B6A54A100ECD736 /* IntencityVIewController.swift in Sources */,
 				BD7B44952B6A90F700ECD736 /* PaywallViewController.swift in Sources */,
@@ -721,6 +741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6R59JHT6PY;
@@ -738,6 +759,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dsfwed.dssdfsd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -749,6 +771,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6R59JHT6PY;
@@ -766,6 +789,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dsfwed.dssdfsd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

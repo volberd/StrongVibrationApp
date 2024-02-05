@@ -48,7 +48,10 @@ extension IntensityViewController {
     @objc
     private func openMusicController() {
         let vc = MusicViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false) {
+            print(vc.selectedSong)
+        }
     }
     
     @objc
