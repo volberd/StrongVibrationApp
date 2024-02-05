@@ -39,24 +39,39 @@ class MainTabBarController: UITabBarController {
     
     private func setupBubbleTabBar() {
         let tabs = [
-            BubbleTabBar.Tab(id: "1", tint: .white, content: .image(uimage: UIImage(named: "gearIcon")!)),
-            BubbleTabBar.Tab(id: "2", tint: .white, content: .image(uimage: UIImage(named: "intencityIcon")!)),
-            BubbleTabBar.Tab(id: "3", tint: .white, content: .image(uimage: UIImage(named: "patternsIcon")!)),
+            BubbleTabBar.Tab(id: "1", tint: .white, content: .image(uimage: UIImage(named: "gearIcon")!), title: "Settings"),
+            BubbleTabBar.Tab(id: "2", tint: .white, content: .image(uimage: UIImage(named: "intencityIcon")!), title: "Intensity"),
+            BubbleTabBar.Tab(id: "3", tint: .white, content: .image(uimage: UIImage(named: "patternsIcon")!), title: "Patterns"),
         ]
         
         bubbleTabBar.show(tabs: tabs)
         
         bubbleTabBar.didSelectTab
-            .sink { event in
+            .sink { [weak self] event in
+                guard let self = self else { return }
                 switch event {
                 case .willSelect(let index):
-                    self.selectedIndex = index
+                    if index == 2 {
+                        self.presentPatternsViewControllerModally()
+                    } else {
+                        self.selectedIndex = index
+                    }
                 case .didSelect(let index):
                     print("Selected tab index: \(index)")
+                    
                 }
             }
             .store(in: &subscriptions)
     }
+
+    private func presentPatternsViewControllerModally() {
+        let patternsViewController = PatternsViewController() // Создание экземпляра PatternsViewController
+        let navigationController = UINavigationController(rootViewController: patternsViewController) // Обертка в UINavigationController (если необходимо)
+        navigationController.modalPresentationStyle = .formSheet
+        present(navigationController, animated: true, completion: nil)
+    }
+
+
     
     private var subscriptions = Set<AnyCancellable>()
 }
@@ -73,21 +88,14 @@ extension MainTabBarController {
         tabBar.isTranslucent = true
         tabBar.backgroundImage = UIImage()
     }
-    
-    private func presentPatternsViewControllerModally() {
-        let patternsViewController = PatternsViewController() // Создание экземпляра PatternsViewController
-        let navigationController = UINavigationController(rootViewController: patternsViewController) // Обертка в UINavigationController (если необходимо)
-        navigationController.modalPresentationStyle = .formSheet
-        present(navigationController, animated: true, completion: nil)
+}
+
+extension MainTabBarController: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        // Установка предыдущей выбранной табы после закрытия модального контроллера
+        selectedIndex = bubbleTabBar.selectedIndex ?? 0
     }
-
-
 }
-
-extension MainTabBarController: UITabBarControllerDelegate {
-
-}
-
 
 import Foundation
 import UIKit
@@ -146,13 +154,12 @@ class BubbleTabBar: UIView {
         
         let clickableRadius = 2*Self.itemWidth
         for i in 0..<tabs.count {
-            if i < 2 {
-                let center = centerXFor(i)
-                let clickableArea = (center-clickableRadius)...(center+clickableRadius)
-                if clickableArea.contains(location.x) {
-                    selectAnimation(i, animated: true)
-                    return
-                }
+            let center = centerXFor(i)
+            let clickableArea = (center-clickableRadius)...(center+clickableRadius)
+            if clickableArea.contains(location.x) {
+                
+                selectAnimation(i, animated: i == 2 ? false : true)
+               return
             }
         }
     }
@@ -229,14 +236,27 @@ class BubbleTabBar: UIView {
         tabShapes.forEach({ $0.removeFromSuperlayer() })
         tabShapes = []
         
+        // Удаление предыдущих тайтлов
+        subviews.compactMap { $0 as? UILabel }.forEach { $0.removeFromSuperview() }
+
         tabs.enumerated().forEach { item in
             let isSelected = item.element == selectedTab
             let tab = buildTabShapeFrom(item.element)
             tab.frame = frameForDotAt(item.offset, false)
             tabShapes.append(tab)
             layer.addSublayer(tab)
-         
             tab.setSelected(isSelected, animated: false)
+
+            // Добавляем тайтл к табе
+            let titleLabel = UILabel()
+            titleLabel.text = item.element.title
+            titleLabel.font = UIFont.systemFont(ofSize: 10, weight: .bold)
+            titleLabel.textAlignment = .center
+            titleLabel.textColor = .white
+            titleLabel.sizeToFit()
+            titleLabel.center = CGPoint(x: tab.position.x, y: frame.height/1.7) // Пересчитываем положение тайтла
+            titleLabel.layer.zPosition = 1 // Устанавливаем zPosition для поднятия тайтлов
+            addSubview(titleLabel)
         }
     }
     
@@ -286,7 +306,10 @@ class BubbleTabBar: UIView {
         guard let previousIndex = selectedIndex else { return }
         
         _didSelectTab.send(.willSelect(index))
-        selectedTab = tabs[index]
+        if index != 2 {
+            selectedTab = tabs[index]
+        }
+        
         
         // Animate background
         if animated {
@@ -296,7 +319,7 @@ class BubbleTabBar: UIView {
             backShape.path = backgroundPath(centerXFor(index)).cgPath
         }
         
-        // Animate dots
+     
         let fromDot = tabShapes[previousIndex]
         let toDot = tabShapes[index]
         
@@ -398,7 +421,8 @@ extension BubbleTabBar {
         var id: String
         let tint: UIColor
         let content: TabContent
-        
+        let title: String // Добавлено свойство для тайтла
+
         static func == (lhs: Self, rhs: Self) -> Bool {
             lhs.id == rhs.id
         }

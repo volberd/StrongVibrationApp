@@ -193,7 +193,54 @@
                   endingLineNumber = "51"
                   offsetFromSymbolStart = "170">
                </Location>
+               <Location
+                  uuid = "214D85CA-D6BF-4AA0-BB9B-5922D6066A39 - 972ee0f26c49f88d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.GenreCollectionViewCell.handleUI() -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/View/Cell/GenreCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "170">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8859DD71-A3FA-4D79-8343-DEDF8281D5D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Navigation/MainScreenNavigationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "onTap(gesture:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61827541-642E-4002-8F51-A67E93CA0915"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Navigation/MainScreenNavigationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
+            landmarkName = "selectAnimation(_:animated:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

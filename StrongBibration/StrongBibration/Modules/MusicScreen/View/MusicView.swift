@@ -24,8 +24,9 @@ class MusicView: UIView {
     
     private var doneButton: UIButton = {
        let obj = UIButton()
-        obj.setBackgroundImage(UIImage(named: ""), for: .normal)
-        obj.setTitle("", for: .normal)
+        obj.setBackgroundImage(UIImage(named: "customButtonBackground"), for: .normal)
+        obj.setTitle("Done", for: .normal)
+        obj.alpha = 0.5
         return obj
     }()
     
@@ -53,6 +54,31 @@ class MusicView: UIView {
         return obj
     }()
     
+    private lazy var songTitleStackView: UIStackView = {
+       let obj = UIStackView()
+        obj.axis = .vertical
+        obj.spacing = 8.sizeH
+        return obj
+    }()
+    
+    private lazy var baseSoundNameLabel: UILabel = {
+      let obj = UILabel()
+        obj.font = .systemFont(ofSize: 15.sizeW, weight: .medium)
+        obj.textColor = .white
+        obj.text = "Sound"
+        obj.textAlignment = .left
+    return obj
+    }()
+    
+    private lazy var baseSoundeDescriptioneLabel: UILabel = {
+      let obj = UILabel()
+        obj.font = .systemFont(ofSize: 11.sizeW, weight: .regular)
+        obj.textColor = .white.withAlphaComponent(0.5)
+        obj.text = "The environment expressed through sound"
+        obj.textAlignment = .left
+    return obj
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubviews()
@@ -66,6 +92,10 @@ class MusicView: UIView {
     private func setupSubviews() {
         addSubview(backgroundImage)
         addSubview(backButton)
+        
+        addSubview(songTitleStackView)
+        songTitleStackView.addArrangedSubview(baseSoundNameLabel)
+        songTitleStackView.addArrangedSubview(baseSoundeDescriptioneLabel)
         
         addSubview(titlesCollectionView)
         addSubview(listsCollectionView)
@@ -83,10 +113,17 @@ class MusicView: UIView {
             make.top.equalToSuperview().inset(69.sizeH)
         }
         
+        songTitleStackView.snp.makeConstraints { make in
+            make.leading.equalTo(backButton.snp.trailing).offset(26.sizeW)
+            make.top.equalToSuperview().inset(69.sizeH)
+            make.height.equalTo(42.sizeH)
+        }
+
+        
         titlesCollectionView.snp.makeConstraints { make in
             make.top.equalTo(backButton.snp.bottom).offset(32.sizeH)
             make.leading.equalToSuperview().offset(8.sizeW)
-            make.trailing.equalToSuperview()
+            make.trailing.equalToSuperview().inset(24.sizeW)
             make.height.equalTo(48.sizeH)
         }
         
