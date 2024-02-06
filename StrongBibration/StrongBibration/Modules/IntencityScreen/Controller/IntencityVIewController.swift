@@ -56,6 +56,8 @@ extension IntensityViewController {
     
     @objc
     private func blockButtonTaped() {
-        
+        let vc = LockViewController()
+        self.present(vc, animated: true) {
+        }
     }
 }

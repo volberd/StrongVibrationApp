@@ -51,6 +51,8 @@
 		BDC4E8202B71279700F684F0 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E81F2B71279700F684F0 /* GenreCollectionViewCell.swift */; };
 		BDC4E8222B7127FF00F684F0 /* GenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8212B7127FF00F684F0 /* GenresModel.swift */; };
 		BDC4E8242B71388200F684F0 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8232B71388200F684F0 /* ListCollectionViewCell.swift */; };
+		BDC4E82A2B726F9600F684F0 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8292B726F9600F684F0 /* LockViewController.swift */; };
+		BDC4E82C2B726FBD00F684F0 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E82B2B726FBD00F684F0 /* LockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		BDC4E81F2B71279700F684F0 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDC4E8212B7127FF00F684F0 /* GenresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresModel.swift; sourceTree = "<group>"; };
 		BDC4E8232B71388200F684F0 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDC4E8292B726F9600F684F0 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
+		BDC4E82B2B726FBD00F684F0 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		BD22A3752B692BEF000E334E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BDC4E8252B726F3100F684F0 /* BlockScreen */,
 				BDB589082B6D3C6B00F50E14 /* MusicScreen */,
 				BD7B44692B6A53F600ECD736 /* IntencityScreen */,
 				BD7B44892B6A8D1200ECD736 /* SubscribeScreen */,
@@ -475,6 +480,39 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		BDC4E8252B726F3100F684F0 /* BlockScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BDC4E8282B726F5F00F684F0 /* Model */,
+				BDC4E8272B726F5900F684F0 /* View */,
+				BDC4E8262B726F5000F684F0 /* Controller */,
+			);
+			path = BlockScreen;
+			sourceTree = "<group>";
+		};
+		BDC4E8262B726F5000F684F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDC4E8292B726F9600F684F0 /* LockViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDC4E8272B726F5900F684F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDC4E82B2B726FBD00F684F0 /* LockView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDC4E8282B726F5F00F684F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -564,6 +602,8 @@
 				BD7B44722B6A548200ECD736 /* PatternsViewController.swift in Sources */,
 				BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */,
 				BDC4E8242B71388200F684F0 /* ListCollectionViewCell.swift in Sources */,
+				BDC4E82A2B726F9600F684F0 /* LockViewController.swift in Sources */,
+				BDC4E82C2B726FBD00F684F0 /* LockView.swift in Sources */,
 				BDB589212B6ED73000F50E14 /* SegmentedControl.swift in Sources */,
 				BD7B44882B6A86AC00ECD736 /* SubscribeButton.swift in Sources */,
 				BD7B445C2B6A4CAF00ECD736 /* SettingsNavigationController.swift in Sources */,
@@ -757,7 +797,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dsfwed.dssdfsd;
+				PRODUCT_BUNDLE_IDENTIFIER = "sddsffs-ssdsfdf-fsfds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -787,7 +827,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dsfwed.dssdfsd;
+				PRODUCT_BUNDLE_IDENTIFIER = "sddsffs-ssdsfdf-fsfds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
