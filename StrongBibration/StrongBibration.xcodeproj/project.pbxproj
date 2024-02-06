@@ -53,6 +53,7 @@
 		BDC4E8242B71388200F684F0 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8232B71388200F684F0 /* ListCollectionViewCell.swift */; };
 		BDC4E82A2B726F9600F684F0 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8292B726F9600F684F0 /* LockViewController.swift */; };
 		BDC4E82C2B726FBD00F684F0 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E82B2B726FBD00F684F0 /* LockView.swift */; };
+		BDD1DE962B728C7A00C869FB /* CustomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE952B728C7A00C869FB /* CustomPopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		BDC4E8232B71388200F684F0 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDC4E8292B726F9600F684F0 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
 		BDC4E82B2B726FBD00F684F0 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		BDD1DE952B728C7A00C869FB /* CustomPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		BD22A3752B692BEF000E334E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BDD1DE912B728B1000C869FB /* CustomPopUpScreen */,
 				BDC4E8252B726F3100F684F0 /* BlockScreen */,
 				BDB589082B6D3C6B00F50E14 /* MusicScreen */,
 				BD7B44692B6A53F600ECD736 /* IntencityScreen */,
@@ -513,6 +516,38 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BDD1DE912B728B1000C869FB /* CustomPopUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1DE942B728B2E00C869FB /* Model */,
+				BDD1DE932B728B2800C869FB /* View */,
+				BDD1DE922B728B2100C869FB /* Controller */,
+			);
+			path = CustomPopUpScreen;
+			sourceTree = "<group>";
+		};
+		BDD1DE922B728B2100C869FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1DE952B728C7A00C869FB /* CustomPopupViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDD1DE932B728B2800C869FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDD1DE942B728B2E00C869FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -603,6 +638,7 @@
 				BD22A35C2B691F25000E334E /* AppDelegate.swift in Sources */,
 				BDC4E8242B71388200F684F0 /* ListCollectionViewCell.swift in Sources */,
 				BDC4E82A2B726F9600F684F0 /* LockViewController.swift in Sources */,
+				BDD1DE962B728C7A00C869FB /* CustomPopupViewController.swift in Sources */,
 				BDC4E82C2B726FBD00F684F0 /* LockView.swift in Sources */,
 				BDB589212B6ED73000F50E14 /* SegmentedControl.swift in Sources */,
 				BD7B44882B6A86AC00ECD736 /* SubscribeButton.swift in Sources */,

@@ -19,16 +19,14 @@ class IntensityView: UIView {
     private lazy var backgroundImage: UIImageView = {
         let obj = UIImageView()
         obj.image = UIImage(named: "baseBackgroundImage")
+        obj.isUserInteractionEnabled = true
         return obj
     }()
     
-    private lazy var notVibrationLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Not vibrating?"
-        label.font = .systemFont(ofSize: 14.sizeH, weight: .regular)
-        label.textColor = .white
-        label.textAlignment = .center
-        return label
+    lazy var notVibrationButton: UIButton = {
+        let obj = UIButton()
+        obj.setTitle("Not vibrating?", for: .normal)
+        return obj
     }()
     
     lazy var musicButton: UIButton = {
@@ -110,7 +108,7 @@ class IntensityView: UIView {
         addSubview(backgroundImage)
         addSubview(sliderImageView)
         addSubview(pinkShadowImageView)
-        addSubview(notVibrationLabel)
+        addSubview(notVibrationButton)
         addSubview(musicButton)
         addSubview(lockButton)
         addSubview(waveView)
@@ -138,7 +136,7 @@ class IntensityView: UIView {
             make.size.equalTo(buttonSize)
         }
         
-        notVibrationLabel.snp.makeConstraints { make in
+        notVibrationButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.centerY.equalTo(lockButton.snp.centerY)
         }
@@ -146,7 +144,7 @@ class IntensityView: UIView {
         vibrateButton.snp.makeConstraints { make in
             make.size.equalTo(160.sizeH)
             make.centerX.equalToSuperview()
-            make.top.equalTo(notVibrationLabel.snp.bottom).offset(68.sizeH)
+            make.top.equalTo(notVibrationButton.snp.bottom).offset(68.sizeH)
         }
         
         pinkShadowImageView.snp.makeConstraints { make in

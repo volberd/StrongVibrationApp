@@ -29,6 +29,7 @@ class IntensityViewController: UIViewController {
         mainView.vibrateButton.addTarget(self, action: #selector(vibrateButtonTapped), for: .touchUpInside)
         mainView.musicButton.addTarget(self, action: #selector(openMusicController), for: .touchUpInside)
         mainView.lockButton.addTarget(self, action: #selector(blockButtonTaped), for: .touchUpInside)
+        mainView.notVibrationButton.addTarget(self, action: #selector(showCustomPopup), for: .touchUpInside)
     }
 }
 
@@ -59,5 +60,12 @@ extension IntensityViewController {
         let vc = LockViewController()
         self.present(vc, animated: true) {
         }
+    }
+    
+    @objc
+    private func showCustomPopup() {
+        let popupVC = CustomPopupViewController()
+        popupVC.modalPresentationStyle = .overFullScreen
+        present(popupVC, animated: true, completion: nil)
     }
 }

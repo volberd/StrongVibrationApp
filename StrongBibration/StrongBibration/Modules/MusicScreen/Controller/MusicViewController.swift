@@ -9,7 +9,6 @@ import UIKit
 import MediaPlayer
 
 class MusicViewController: UIViewController {
-    
     private let mainView = MusicView()
     private let genresTitles = GenresModel.allCases
     var selectedSong = "Vova"
@@ -56,7 +55,7 @@ extension MusicViewController {
 //MARK: helpers
 extension MusicViewController {
     private func cellForListsCollectionView(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as? ListCollectionViewCell else {
+        guard var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as? ListCollectionViewCell else {
             return UICollectionViewCell()
         }
         
