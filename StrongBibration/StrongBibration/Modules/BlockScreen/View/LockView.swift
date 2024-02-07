@@ -45,7 +45,7 @@ class LockView: UIView {
         return obj
     }()
     
-    private lazy var holdButton: UIButton = {
+    lazy var holdButton: UIButton = {
        let obj = UIButton()
         obj.setBackgroundImage(UIImage(named: "holdButtonImage"), for: .normal)
         obj.setTitle("Unlock", for: .normal)

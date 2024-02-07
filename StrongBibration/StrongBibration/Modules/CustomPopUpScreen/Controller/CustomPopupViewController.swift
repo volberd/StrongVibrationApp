@@ -6,41 +6,61 @@
 //
 
 import UIKit
-import SnapKit
 
 class CustomPopupViewController: UIViewController {
-
-    let popupView = UIView()
-    let closeButton = UIButton()
-
+    let mainView = PopupView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .clear
-
-        // Add popup view
-        view.addSubview(popupView)
-        popupView.backgroundColor = .white
-        popupView.snp.makeConstraints { make in
-            make.centerX.centerY.equalToSuperview()
-            make.width.equalToSuperview().multipliedBy(0.8)
-            make.height.equalToSuperview().multipliedBy(0.5)
-        }
-
-        // Add close button
-        popupView.addSubview(closeButton)
-        closeButton.setTitle("Close", for: .normal)
-        closeButton.setTitleColor(.black, for: .normal)
-        closeButton.addTarget(self, action: #selector(closePopup), for: .touchUpInside)
-        closeButton.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-        }
-
-        // You can add other subviews and customize the popup view here
+        initViewController()
     }
+    
+    override func loadView() {
+        super.loadView()
+        view = mainView
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateBackgroundColorChange()
+    }
+    
+    
+}
 
+//MARK: - Targets
+extension CustomPopupViewController {
     @objc func closePopup() {
+        view.backgroundColor = .clear
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func goToVibrationSettingsPopup() {
+        openVibrationSettings()
+    }
+}
+
+//MARK: - Methods
+extension CustomPopupViewController {
+    private func initViewController() {
+        mainView.backButton.addTarget(self, action: #selector(closePopup), for: .touchUpInside)
+        mainView.goItButton.addTarget(self, action: #selector(goToVibrationSettingsPopup), for: .touchUpInside)
+    }
+    
+    func animateBackgroundColorChange() {
+        UIView.animate(withDuration: 1) {
+            self.view.backgroundColor = .black.withAlphaComponent(0.5)
+        }
+    }
+    
+    private func openVibrationSettings() {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        
+        if UIApplication.shared.canOpenURL(settingsURL) {
+            UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+        }
     }
 }

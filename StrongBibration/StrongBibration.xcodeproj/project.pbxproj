@@ -54,6 +54,7 @@
 		BDC4E82A2B726F9600F684F0 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8292B726F9600F684F0 /* LockViewController.swift */; };
 		BDC4E82C2B726FBD00F684F0 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E82B2B726FBD00F684F0 /* LockView.swift */; };
 		BDD1DE962B728C7A00C869FB /* CustomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE952B728C7A00C869FB /* CustomPopupViewController.swift */; };
+		BDD1DE982B73767400C869FB /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE972B73767400C869FB /* PopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		BDC4E8292B726F9600F684F0 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
 		BDC4E82B2B726FBD00F684F0 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 		BDD1DE952B728C7A00C869FB /* CustomPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupViewController.swift; sourceTree = "<group>"; };
+		BDD1DE972B73767400C869FB /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,6 +539,7 @@
 		BDD1DE932B728B2800C869FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDD1DE972B73767400C869FB /* PopupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 			files = (
 				BD7B44832B6A77FE00ECD736 /* UIFont + ext.swift in Sources */,
 				BDB5891D2B6E6BC400F50E14 /* CustomSlider.swift in Sources */,
+				BDD1DE982B73767400C869FB /* PopupView.swift in Sources */,
 				BD22A3822B699BB5000E334E /* MainScreenNavigationController.swift in Sources */,
 				BD22A37F2B699880000E334E /* UIVIew + ext.swift in Sources */,
 				BD7B449A2B6A91E200ECD736 /* ProgressHelperView.swift in Sources */,

@@ -66,6 +66,9 @@ extension IntensityViewController {
     private func showCustomPopup() {
         let popupVC = CustomPopupViewController()
         popupVC.modalPresentationStyle = .overFullScreen
-        present(popupVC, animated: true, completion: nil)
+        popupVC.modalTransitionStyle = .flipHorizontal
+        present(popupVC, animated: true) {
+      
+        }
     }
 }
