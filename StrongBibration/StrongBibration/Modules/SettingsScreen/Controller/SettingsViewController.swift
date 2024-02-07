@@ -144,12 +144,12 @@ extension SettingsViewController {
     }
     
     private func openVibrationSettings() {
-           guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
-               return
-           }
-           
-           if UIApplication.shared.canOpenURL(settingsURL) {
-               UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
-           }
-       }
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        
+        if UIApplication.shared.canOpenURL(settingsURL) {
+            UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+        }
+    }
 }

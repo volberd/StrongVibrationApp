@@ -18,15 +18,12 @@ class CustomPopupViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = mainView
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateBackgroundColorChange()
     }
-    
-    
 }
 
 //MARK: - Targets
@@ -45,7 +42,8 @@ extension CustomPopupViewController {
 extension CustomPopupViewController {
     private func initViewController() {
         mainView.backButton.addTarget(self, action: #selector(closePopup), for: .touchUpInside)
-        mainView.goItButton.addTarget(self, action: #selector(goToVibrationSettingsPopup), for: .touchUpInside)
+        mainView.goItButton.addTarget(self, action: #selector(closePopup), for: .touchUpInside)
+        mainView.toTheSettingsButton.addTarget(self, action: #selector(goToVibrationSettingsPopup), for: .touchUpInside)
     }
     
     func animateBackgroundColorChange() {

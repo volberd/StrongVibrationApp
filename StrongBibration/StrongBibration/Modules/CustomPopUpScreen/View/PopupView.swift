@@ -58,12 +58,52 @@ class PopupView: UIView {
     }()
     
     private let wayLabel: UILabel = {
-       let obj = UILabel()
-        obj.text = "Not vibration?"
+        let obj = UILabel()
         obj.textColor = .white
-        obj.font = .systemFont(ofSize: 18.sizeW, weight: .regular)
+        obj.numberOfLines = 2
+        obj.textAlignment = .left
+        
+        let attributedText = NSMutableAttributedString(string: "Settings -> Sound -> Turn ON\n", attributes: [
+            .font: UIFont.systemFont(ofSize: 14.sizeW, weight: .medium),
+            .foregroundColor: UIColor.white
+        ])
+        
+        attributedText.append(NSAttributedString(string: "’During a call’", attributes: [
+            .font: UIFont.systemFont(ofSize: 14.sizeW, weight: .bold),
+            .foregroundColor: UIColor.white
+        ]))
+        
+        attributedText.append(NSAttributedString(string: " or ", attributes: [
+            .font: UIFont.systemFont(ofSize: 14.sizeW, weight: .medium),
+            .foregroundColor: UIColor.white
+        ]))
+        
+        attributedText.append(NSAttributedString(string: "‘In silent mode’", attributes: [
+            .font: UIFont.systemFont(ofSize: 14.sizeW, weight: .bold),
+            .foregroundColor: UIColor.white
+        ]))
+        
+        obj.attributedText = attributedText
         return obj
     }()
+    
+    let toTheSettingsButton: UIButton = {
+        let obj = UIButton()
+        obj.setTitle("To the settings >", for: .normal)
+        obj.setTitleColor(.black, for: .normal)
+        obj.contentHorizontalAlignment = .left
+        obj.titleLabel?.font = .systemFont(ofSize: 14.sizeW)
+        
+        let attributes: [NSAttributedString.Key: Any] = [
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            .underlineColor: UIColor.black
+        ]
+        let attributedString = NSAttributedString(string: "To the settings >", attributes: attributes)
+        obj.setAttributedTitle(attributedString, for: .normal)
+        
+        return obj
+    }()
+
     
     let goItButton: UIButton = {
         let obj = UIButton()
@@ -72,8 +112,6 @@ class PopupView: UIView {
         return obj
     }()
 
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubviews()
@@ -92,6 +130,8 @@ class PopupView: UIView {
         popupView.addSubview(separatorView)
         popupView.addSubview(checkLabel)
         popupView.addSubview(goItButton)
+        popupView.addSubview(wayLabel)
+        popupView.addSubview(toTheSettingsButton)
     }
     
     private func setupConstraints() {
@@ -127,11 +167,23 @@ class PopupView: UIView {
             make.leading.trailing.equalToSuperview().inset(26.sizeW)
         }
         
+        wayLabel.snp.makeConstraints { make in
+            make.top.equalTo(checkLabel.snp.bottom).offset(34.sizeH)
+            make.leading.trailing.equalToSuperview().inset(26.sizeW)
+        }
+        
+        toTheSettingsButton.snp.makeConstraints { make in
+            make.bottom.equalTo(goItButton.snp.top).offset(-16.sizeH)
+            make.leading.equalToSuperview().inset(26.sizeW)
+            make.height.equalTo(34.sizeH)
+        }
+        
         goItButton.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(26.sizeH)
             make.centerX.equalToSuperview()
             make.height.equalTo(40.sizeH)
             make.width.equalTo(187.sizeW)
         }
+        
     }
 }
