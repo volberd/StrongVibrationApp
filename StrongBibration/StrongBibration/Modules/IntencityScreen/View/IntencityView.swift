@@ -42,7 +42,7 @@ class IntensityView: UIView {
     }()
     
     private let softLabel: UILabel = {
-       let obj = UILabel()
+        let obj = UILabel()
         obj.text = "Soft"
         obj.font = .systemFont(ofSize: 14, weight: .medium)
         obj.textColor = .white
@@ -50,7 +50,7 @@ class IntensityView: UIView {
     }()
     
     private let hardLabel: UILabel = {
-       let obj = UILabel()
+        let obj = UILabel()
         obj.text = "Hard"
         obj.font = .systemFont(ofSize: 14, weight: .medium)
         obj.textColor = .white
@@ -71,7 +71,7 @@ class IntensityView: UIView {
     }()
     
     private lazy var sliderImageView: UIImageView = {
-       let obj = UIImageView()
+        let obj = UIImageView()
         obj.image = UIImage(named: "sliderImage")
         return obj
     }()
@@ -91,6 +91,39 @@ class IntensityView: UIView {
     private lazy var waveView: UIView = {
         let obj = UIView()
         
+        return obj
+    }()
+    
+    let stateStackView: UIStackView = {
+        let obj = UIStackView()
+        obj.axis = .vertical
+        return obj
+    }()
+    
+    let pressButtonTitle: UILabel = {
+        let obj = UILabel()
+        obj.textColor = .white
+        obj.numberOfLines = 2
+        obj.textAlignment = .center
+        
+        let attributedText = NSMutableAttributedString(string: "Press the button\n", attributes: [
+            .font: UIFont.systemFont(ofSize: 14.sizeW, weight: .medium),
+            .foregroundColor: UIColor.white
+        ])
+        
+        attributedText.append(NSAttributedString(string: "to start vibration", attributes: [
+            .font: UIFont.systemFont(ofSize: 8.sizeW, weight: .medium),
+            .foregroundColor: UIColor.white
+        ]))
+        
+        obj.attributedText = attributedText
+        return obj
+    }()
+    
+    var stateView: ChooseStateView = {
+        let obj = ChooseStateView()
+        obj.isHidden = true
+        obj.model = ChooseStateModel(title: "Vulcano", icon: "tornado")
         return obj
     }()
     
@@ -117,6 +150,10 @@ class IntensityView: UIView {
         addSubview(softLabel)
         addSubview(hardLabel)
         addSubview(segmentedControl)
+        addSubview(stateStackView)
+        
+        stateStackView.addArrangedSubview(pressButtonTitle)
+        stateStackView.addArrangedSubview(stateView)
     }
     
     private func setupConstraints() {
@@ -183,6 +220,11 @@ class IntensityView: UIView {
             make.height.equalTo(40.sizeH)
             make.bottom.equalTo(hardLabel.snp.top).offset(-40.sizeH)
         }
+        
+        stateStackView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(vibrateButton.snp.bottom).offset(25.sizeH)
+        }
     }
     
     override func layoutSubviews() {
@@ -195,6 +237,8 @@ class IntensityView: UIView {
         
         vibrateButton.setBackgroundImage(UIImage(named: "tapedButton"), for: .normal)
         pinkShadowImageView.isHidden = false
+        stateView.isHidden = false
+        pressButtonTitle.isHidden = true
     }
 }
 
@@ -207,6 +251,8 @@ extension IntensityView {
         }
         vibrateButton.setBackgroundImage(UIImage(named: "onButton"), for: .normal)
         pinkShadowImageView.isHidden = true
+        stateView.isHidden = true
+        pressButtonTitle.isHidden = false
         pulseLayers.removeAll()
     }
     
@@ -254,24 +300,5 @@ extension IntensityView {
         opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         opacityAnimation.repeatCount = .greatestFiniteMagnitude
         pulseLayers[index].add(opacityAnimation, forKey: "opacity")
-    }
-}
-
-
-enum ChooseModelControl: CaseIterable {
-    case slow
-    case medium
-    case fast
-    
-    var title: String {
-        switch self {
-       
-        case .slow:
-            return "Slow"
-        case .medium:
-            return "Medium"
-        case .fast:
-            return "Fast"
-        }
     }
 }

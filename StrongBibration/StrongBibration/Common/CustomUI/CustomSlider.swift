@@ -29,10 +29,10 @@ final class Slider: UISlider {
     }
     // Step 3
     private func createBaseLayer() {
-//        baseLayer.borderWidth = 1
-//        baseLayer.borderColor = UIColor.white.withAlphaComponent(0.3).cgColor
+        //        baseLayer.borderWidth = 1
+        //        baseLayer.borderColor = UIColor.white.withAlphaComponent(0.3).cgColor
         baseLayer.masksToBounds = true
-//        baseLayer.backgroundColor = UIColor.white.cgColor
+        //        baseLayer.backgroundColor = UIColor.white.cgColor
         baseLayer.frame = .init(x: 0, y: frame.height / 4, width: frame.width, height: frame.height / 3)
         baseLayer.cornerRadius = baseLayer.frame.height / 2
         layer.insertSublayer(baseLayer, at: 0)
@@ -97,8 +97,6 @@ final class ThumbView: UIView {
         middleView.layer.cornerRadius = thumbSize / 2
         addSubview(middleView)
     }
-
-
 }
 // Step 4
 extension UIView {

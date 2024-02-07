@@ -26,7 +26,7 @@ class MainTabBarController: UITabBarController {
         let mainSettingsNavigationVC = SettingsNavigationController()
         let mainIntensityNavigationVC = IntensityNavigationController()
         let mainPatternsNavigationVC = PatternsNavigationController()
-
+        
         viewControllers = [mainSettingsNavigationVC, mainIntensityNavigationVC, mainPatternsNavigationVC]
     }
     
@@ -63,15 +63,15 @@ class MainTabBarController: UITabBarController {
             }
             .store(in: &subscriptions)
     }
-
+    
     private func presentPatternsViewControllerModally() {
         let patternsViewController = PatternsViewController() // Создание экземпляра PatternsViewController
         let navigationController = UINavigationController(rootViewController: patternsViewController) // Обертка в UINavigationController (если необходимо)
         navigationController.modalPresentationStyle = .formSheet
         present(navigationController, animated: true, completion: nil)
     }
-
-
+    
+    
     
     private var subscriptions = Set<AnyCancellable>()
 }
@@ -110,7 +110,7 @@ class BubbleTabBar: UIView {
     private lazy var yUnselectedLocation: CGFloat = 3*Self.cornerRadius/2
     
     let gradientLayer = CAGradientLayer()
-   
+    
     
     /// View that represents the background of the tabBar
     private var backShape: CAShapeLayer = CAShapeLayer()
@@ -159,7 +159,7 @@ class BubbleTabBar: UIView {
             if clickableArea.contains(location.x) {
                 
                 selectAnimation(i, animated: i == 2 ? false : true)
-               return
+                return
             }
         }
     }
@@ -226,7 +226,7 @@ class BubbleTabBar: UIView {
         
         backShape.fillColor = UIColor.theme(.darkPink).cgColor
     }
-
+    
     
     /**
      Clean the current tabs and redraw the new ones
@@ -238,7 +238,7 @@ class BubbleTabBar: UIView {
         
         // Удаление предыдущих тайтлов
         subviews.compactMap { $0 as? UILabel }.forEach { $0.removeFromSuperview() }
-
+        
         tabs.enumerated().forEach { item in
             let isSelected = item.element == selectedTab
             let tab = buildTabShapeFrom(item.element)
@@ -246,7 +246,7 @@ class BubbleTabBar: UIView {
             tabShapes.append(tab)
             layer.addSublayer(tab)
             tab.setSelected(isSelected, animated: false)
-
+            
             // Добавляем тайтл к табе
             let titleLabel = UILabel()
             titleLabel.text = item.element.title
@@ -319,19 +319,19 @@ class BubbleTabBar: UIView {
             backShape.path = backgroundPath(centerXFor(index)).cgPath
         }
         
-     
+        
         let fromDot = tabShapes[previousIndex]
         let toDot = tabShapes[index]
         
         fromDot.setSelected(false, animated: animated)
         toDot.setSelected(true, animated: animated)
-
+        
         // Animate dots between
         if animated && abs(index - previousIndex) > 1 {
             let start = (1+min(previousIndex, index))
             let end = max(previousIndex, index)
             let dotsIndeces = start..<end
-
+            
             dotsIndeces.forEach { dotIndex in
                 let tab = tabShapes[dotIndex]
                 tab.applyShiftDownAnimation()
@@ -352,7 +352,7 @@ class BubbleTabBar: UIView {
         anim.delegate = self
         return anim
     }
-        
+    
     /**
      Define the background bezier path using the `centerX` as the
      location of the selected index
@@ -422,7 +422,7 @@ extension BubbleTabBar {
         let tint: UIColor
         let content: TabContent
         let title: String // Добавлено свойство для тайтла
-
+        
         static func == (lhs: Self, rhs: Self) -> Bool {
             lhs.id == rhs.id
         }
@@ -518,7 +518,7 @@ private class TabLayer: CAShapeLayer, CAAnimationDelegate {
     func applyShiftDownAnimation() {
         var transform = CATransform3DMakeTranslation(0, 18, 0)
         transform = CATransform3DScale(transform, 0.2, 0.2, 1)
-
+        
         let anim = CABasicAnimation(keyPath: #keyPath(CAShapeLayer.transform))
         anim.duration = Self.animationDuration / 2
         anim.timingFunction = CAMediaTimingFunction(name: .easeOut)

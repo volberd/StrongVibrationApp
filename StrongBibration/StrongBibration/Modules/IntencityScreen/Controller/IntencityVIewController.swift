@@ -9,6 +9,8 @@ import UIKit
 
 class IntensityViewController: UIViewController {
     private let mainView = IntensityView()
+    private let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +44,9 @@ extension IntensityViewController {
             mainView.stopAnimation()
         } else {
             mainView.animateWaveView()
+            impactFeedbackGenerator.impactOccurred()
         }
     }
-    
     
     @objc
     private func openMusicController() {

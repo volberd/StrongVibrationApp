@@ -46,7 +46,6 @@
 		BDB589172B6E4C2C00F50E14 /* Reusable + Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589162B6E4C2C00F50E14 /* Reusable + Cell.swift */; };
 		BDB5891A2B6E4C9600F50E14 /* PatternCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589192B6E4C9600F50E14 /* PatternCollectionViewCell.swift */; };
 		BDB5891D2B6E6BC400F50E14 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */; };
-		BDB5891F2B6EC63000F50E14 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */; };
 		BDB589212B6ED73000F50E14 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589202B6ED73000F50E14 /* SegmentedControl.swift */; };
 		BDC4E8202B71279700F684F0 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E81F2B71279700F684F0 /* GenreCollectionViewCell.swift */; };
 		BDC4E8222B7127FF00F684F0 /* GenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8212B7127FF00F684F0 /* GenresModel.swift */; };
@@ -55,6 +54,8 @@
 		BDC4E82C2B726FBD00F684F0 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E82B2B726FBD00F684F0 /* LockView.swift */; };
 		BDD1DE962B728C7A00C869FB /* CustomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE952B728C7A00C869FB /* CustomPopupViewController.swift */; };
 		BDD1DE982B73767400C869FB /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE972B73767400C869FB /* PopupView.swift */; };
+		BDD1DE9B2B73945800C869FB /* ChooseStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE9A2B73945800C869FB /* ChooseStateView.swift */; };
+		BDD1DE9D2B73A1BA00C869FB /* ChooseModelControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE9C2B73A1BA00C869FB /* ChooseModelControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,7 +102,6 @@
 		BDB589162B6E4C2C00F50E14 /* Reusable + Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable + Cell.swift"; sourceTree = "<group>"; };
 		BDB589192B6E4C9600F50E14 /* PatternCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
-		BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		BDB589202B6ED73000F50E14 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		BDC4E81F2B71279700F684F0 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDC4E8212B7127FF00F684F0 /* GenresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresModel.swift; sourceTree = "<group>"; };
@@ -110,6 +110,8 @@
 		BDC4E82B2B726FBD00F684F0 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 		BDD1DE952B728C7A00C869FB /* CustomPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupViewController.swift; sourceTree = "<group>"; };
 		BDD1DE972B73767400C869FB /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		BDD1DE9A2B73945800C869FB /* ChooseStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseStateView.swift; sourceTree = "<group>"; };
+		BDD1DE9C2B73A1BA00C869FB /* ChooseModelControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseModelControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 		BD7B446A2B6A540200ECD736 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDD1DE9C2B73A1BA00C869FB /* ChooseModelControl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 		BD7B446B2B6A540800ECD736 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDD1DE992B73944400C869FB /* Content */,
 				BD7B44772B6A54B200ECD736 /* IntencityView.swift */,
 			);
 			path = View;
@@ -470,7 +474,6 @@
 			isa = PBXGroup;
 			children = (
 				BDB5891C2B6E6BC400F50E14 /* CustomSlider.swift */,
-				BDB5891E2B6EC63000F50E14 /* CustomTabBar.swift */,
 				BDB589202B6ED73000F50E14 /* SegmentedControl.swift */,
 			);
 			path = CustomUI;
@@ -549,6 +552,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BDD1DE992B73944400C869FB /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1DE9A2B73945800C869FB /* ChooseStateView.swift */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -634,6 +645,7 @@
 				BDD1DE982B73767400C869FB /* PopupView.swift in Sources */,
 				BD22A3822B699BB5000E334E /* MainScreenNavigationController.swift in Sources */,
 				BD22A37F2B699880000E334E /* UIVIew + ext.swift in Sources */,
+				BDD1DE9B2B73945800C869FB /* ChooseStateView.swift in Sources */,
 				BD7B449A2B6A91E200ECD736 /* ProgressHelperView.swift in Sources */,
 				BD7B44A12B6A976B00ECD736 /* ListPaywallView.swift in Sources */,
 				BD22A37B2B6996E3000E334E /* Double + ext.swift in Sources */,
@@ -643,6 +655,7 @@
 				BDC4E8242B71388200F684F0 /* ListCollectionViewCell.swift in Sources */,
 				BDC4E82A2B726F9600F684F0 /* LockViewController.swift in Sources */,
 				BDD1DE962B728C7A00C869FB /* CustomPopupViewController.swift in Sources */,
+				BDD1DE9D2B73A1BA00C869FB /* ChooseModelControl.swift in Sources */,
 				BDC4E82C2B726FBD00F684F0 /* LockView.swift in Sources */,
 				BDB589212B6ED73000F50E14 /* SegmentedControl.swift in Sources */,
 				BD7B44882B6A86AC00ECD736 /* SubscribeButton.swift in Sources */,
@@ -651,7 +664,6 @@
 				BD7B445E2B6A51E600ECD736 /* PatternsNavigationController.swift in Sources */,
 				BD7B44742B6A548E00ECD736 /* PatternsView.swift in Sources */,
 				BDB589172B6E4C2C00F50E14 /* Reusable + Cell.swift in Sources */,
-				BDB5891F2B6EC63000F50E14 /* CustomTabBar.swift in Sources */,
 				BD7B449E2B6A922E00ECD736 /* FloatingPoint.swift in Sources */,
 				BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */,
 				BD7B44912B6A903200ECD736 /* CachingManager.swift in Sources */,

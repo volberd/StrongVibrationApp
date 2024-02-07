@@ -45,22 +45,21 @@ class NewPaywallViewController: UIViewController {
         
         updateSubscriptionLabels()
     }
-
+    
     private func setupUI() {
-//        mainView.privacyButton.addTarget(self, action: #selector(termsTapped), for: .touchUpInside)
-//        mainView.termsButton.addTarget(self, action: #selector(policyTapped), for: .touchUpInside)
-//        mainView.restoreButton.addTarget(self, action: #selector(restoreTapped), for: .touchUpInside)
-//        
+        //        mainView.privacyButton.addTarget(self, action: #selector(termsTapped), for: .touchUpInside)
+        //        mainView.termsButton.addTarget(self, action: #selector(policyTapped), for: .touchUpInside)
+        //        mainView.restoreButton.addTarget(self, action: #selector(restoreTapped), for: .touchUpInside)
+        //
         mainView.closeButton.addTarget(self, action: #selector(closeViewController(_:)), for: .touchUpInside)
         mainView.activateButton.addTarget(self, action: #selector(buyAdblocker), for: .touchUpInside)
     }
     
     private func updateSubscriptionLabels() {
         if let price = storeKitManager.storeProducts.first?.displayPrice {
-//            mainView.infoLabel
-//                .text = "3-day free trial, then \(price) per week."
+            //            mainView.infoLabel
+            //                .text = "3-day free trial, then \(price) per week."
         }
-       
     }
     
     private func presentViewController(_ viewController: UIViewController) {
@@ -73,13 +72,13 @@ class NewPaywallViewController: UIViewController {
 @available(iOS 15.0, *)
 extension NewPaywallViewController {
     @objc private func termsTapped() {
-//        let termsViewController = TermsViewController()
-//        presentViewController(termsViewController)
+        //        let termsViewController = TermsViewController()
+        //        presentViewController(termsViewController)
     }
     
     @objc private func policyTapped() {
-//        let privacyViewController = PrivacyViewController()
-//        presentViewController(privacyViewController)
+        //        let privacyViewController = PrivacyViewController()
+        //        presentViewController(privacyViewController)
     }
     
     @objc private func restoreTapped() {
@@ -100,7 +99,7 @@ extension NewPaywallViewController {
         guard let expirationDate = CachingManager.shared.expirationDate else {
             return false
         }
-
+        
         let currentDate = Date().timeIntervalSince1970
         return expirationDate > currentDate
     }
@@ -109,14 +108,14 @@ extension NewPaywallViewController {
     private func buyAdblocker(_ sender: UIButton) {
         ProgressHelper.show()
         sender.isEnabled = false
-    
+        
         Task {
             defer {
                 ProgressHelper.hide()
                 
                 sender.isEnabled = true
             }
-
+            
             do {
                 try await buySubscription()
             } catch {
@@ -127,7 +126,7 @@ extension NewPaywallViewController {
             }
         }
     }
-
+    
     @MainActor
     private func buySubscription() async throws {
         if CachingManager.shared.isSubscriptionActive {
@@ -135,7 +134,7 @@ extension NewPaywallViewController {
             successCompletion()
             return
         }
-
+        
         if let adblockerProduct = storeKitManager.storeProducts.first(where: { $0.id == SubscriptionsModel.subscriptionInfo["strongVibration"]}) {
             do {
                 if let transaction = try await storeKitManager.purchase(adblockerProduct) {
@@ -148,13 +147,12 @@ extension NewPaywallViewController {
             }
         }
     }
-
 }
 
 // MARK: - Helpers
 @available(iOS 15.0, *)
 extension NewPaywallViewController {
-
+    
     private func showErrorAlert(message: String) {
         let alert = UIAlertController(title: "Fail!", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
