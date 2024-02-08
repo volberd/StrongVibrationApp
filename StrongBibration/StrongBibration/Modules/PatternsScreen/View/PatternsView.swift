@@ -18,15 +18,38 @@ class PatternsView: UIView {
         return obj
     }()
     
+    let pressButtonTitle: UILabel = {
+        let obj = UILabel()
+        obj.textColor = .white
+        obj.textAlignment = .center
+        
+        let attributedText = NSMutableAttributedString(string: "Mode\n", attributes: [
+            .font: UIFont.systemFont(ofSize: 10.sizeW, weight: .medium),
+            .foregroundColor: UIColor.white
+        ])
+        
+        obj.attributedText = attributedText
+        return obj
+    }()
+    
+    var selectedMode: UILabel = {
+       let obj = UILabel()
+        obj.font = .systemFont(ofSize: 18.sizeH, weight: .bold)
+        obj.textColor = .white
+        obj.text = "Vulcano"
+        return obj
+    }()
+    
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 19, bottom: 0, right: 19)
+        layout.minimumLineSpacing = 8.sizeW
+        layout.minimumInteritemSpacing = 8.sizeW
         let obj = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        obj.isPagingEnabled = true
-        obj.backgroundColor = .clear
-        obj.setCollectionViewLayout(layout, animated: true)
+        obj.showsVerticalScrollIndicator = false
         obj.showsHorizontalScrollIndicator = false
+        obj.backgroundColor = .clear
+        obj.clipsToBounds = false
         return obj
     }()
     
@@ -42,13 +65,28 @@ class PatternsView: UIView {
     private func setup() {
         addSubview(containerView)
         containerView.addSubview(collectionView)
+        containerView.addSubview(pressButtonTitle)
+        containerView.addSubview(selectedMode)
         
         containerView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
         
+        pressButtonTitle.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(24.sizeH)
+            make.centerX.equalToSuperview()
+        }
+        
+        selectedMode.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(pressButtonTitle.snp.bottom)
+        }
+        
         collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(8.sizeH)
+            make.width.equalTo(280.sizeW)
+            make.bottom.equalToSuperview().inset(32.sizeH)
+            make.top.equalTo(selectedMode.snp.bottom).offset(16.sizeH)
+            make.centerX.equalToSuperview()
         }
     }
     

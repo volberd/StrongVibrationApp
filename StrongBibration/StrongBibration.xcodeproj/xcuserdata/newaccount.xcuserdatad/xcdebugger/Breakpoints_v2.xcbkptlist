@@ -208,6 +208,21 @@
                   endingLineNumber = "58"
                   offsetFromSymbolStart = "170">
                </Location>
+               <Location
+                  uuid = "214D85CA-D6BF-4AA0-BB9B-5922D6066A39 - 972ee0f26c49f8ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.GenreCollectionViewCell.handleUI() -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/MusicScreen/View/Cell/GenreCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "170">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -241,6 +256,22 @@
             endingLineNumber = "310"
             landmarkName = "selectAnimation(_:animated:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07B8570E-4FAC-404A-8DDF-A8EBE1ED099D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/PatternsScreen/View/CollectionViewCell/PatternCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "PatternCollectionViewCell"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

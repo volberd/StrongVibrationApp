@@ -9,10 +9,11 @@ import UIKit
 
 class PatternsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     private let mainView = PatternsView()
+    private var allPatterns = ArrayPaternModelControl.copies
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initViewController()
     }
     
     override func loadView() {
@@ -28,6 +29,7 @@ class PatternsViewController: UIViewController, UICollectionViewDelegate, UIColl
     private func initViewController() {
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
+        
         mainView.collectionView.registerReusableCell(PatternCollectionViewCell.self)
     }
 }
@@ -41,7 +43,7 @@ extension PatternsViewController {
         
         mainView.snp.makeConstraints { make in
             make.width.equalToSuperview().offset(0)
-            make.height.equalTo(498.sizeH)
+            make.height.equalTo(460.sizeH)
             make.bottom.equalToSuperview().offset(0)
             make.leading.trailing.equalToSuperview().inset(0)
         }
@@ -49,20 +51,27 @@ extension PatternsViewController {
 }
 
 //MARK: - Setup CollectionView
-extension PatternsViewController {
+extension PatternsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return allPatterns.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell: PatternCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath) else { return UICollectionViewCell() }
-        cell.backgroundColor = .brown
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PatternCollectionViewCell", for: indexPath) as? PatternCollectionViewCell else {
+            
+            return UICollectionViewCell()
+        }
+
+        cell.setupCell(model: allPatterns[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           // Здесь вы можете установить размер каждой ячейки
-           let itemWidth = (collectionView.bounds.width - 58) / 3 // 58 - сумма расстояний между ячейками и краями
-           return CGSize(width: itemWidth, height: itemWidth)
-       }
+        let spacing: CGFloat = 8.0
+               let availableWidth = collectionView.bounds.width - (spacing * 4)
+        let availableheight = collectionView.bounds.height - (spacing * 4)
+               let itemWidth = availableWidth / 3
+        let itemheight = availableheight / 3
+               return CGSize(width: itemWidth, height: itemheight)
+    }
 }

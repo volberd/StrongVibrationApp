@@ -41,6 +41,7 @@
 		BD7B44A12B6A976B00ECD736 /* ListPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A02B6A976B00ECD736 /* ListPaywallView.swift */; };
 		BD7B44A32B6A992900ECD736 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A22B6A992900ECD736 /* PaywallView.swift */; };
 		BD7B44A62B6BD3D400ECD736 /* BlockSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B44A52B6BD3D400ECD736 /* BlockSettingsButton.swift */; };
+		BDAF01562B750AC700A71B38 /* PatternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF01552B750AC700A71B38 /* PatternModel.swift */; };
 		BDB5890D2B6D899D00F50E14 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5890C2B6D899C00F50E14 /* MusicViewController.swift */; };
 		BDB5890F2B6D89C200F50E14 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5890E2B6D89C200F50E14 /* MusicView.swift */; };
 		BDB589172B6E4C2C00F50E14 /* Reusable + Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB589162B6E4C2C00F50E14 /* Reusable + Cell.swift */; };
@@ -97,6 +98,7 @@
 		BD7B44A02B6A976B00ECD736 /* ListPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPaywallView.swift; sourceTree = "<group>"; };
 		BD7B44A22B6A992900ECD736 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		BD7B44A52B6BD3D400ECD736 /* BlockSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockSettingsButton.swift; sourceTree = "<group>"; };
+		BDAF01552B750AC700A71B38 /* PatternModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternModel.swift; sourceTree = "<group>"; };
 		BDB5890C2B6D899C00F50E14 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		BDB5890E2B6D89C200F50E14 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		BDB589162B6E4C2C00F50E14 /* Reusable + Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable + Cell.swift"; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		BD7B44662B6A53E100ECD736 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDAF01552B750AC700A71B38 /* PatternModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				BD7B44762B6A54A100ECD736 /* IntencityVIewController.swift in Sources */,
 				BD7B44952B6A90F700ECD736 /* PaywallViewController.swift in Sources */,
 				BD7B44702B6A546E00ECD736 /* SettingsView.swift in Sources */,
+				BDAF01562B750AC700A71B38 /* PatternModel.swift in Sources */,
 				BD7B44932B6A906500ECD736 /* SubscriptionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
