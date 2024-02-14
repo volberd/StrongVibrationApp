@@ -74,4 +74,10 @@ extension PatternsViewController: UICollectionViewDelegateFlowLayout {
         let itemheight = availableheight / 3
                return CGSize(width: itemWidth, height: itemheight)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        dismiss(animated: true) {
+            
+        }
+    }
 }

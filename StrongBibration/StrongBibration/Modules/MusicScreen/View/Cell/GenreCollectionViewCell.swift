@@ -53,7 +53,6 @@ extension GenreCollectionViewCell {
         guard let model else {
             return
         }
-        
         titleLabel.text = model.title
         
     }

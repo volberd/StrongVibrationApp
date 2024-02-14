@@ -14,25 +14,32 @@ class PatternCollectionViewCell: UICollectionViewCell, Reusable {
     }()
     
     private let baseImageView: UIImageView = {
-       let obj = UIImageView()
+        let obj = UIImageView()
         obj.image = UIImage(named: "basePattersImage")
         return obj
     }()
-
+    
     private let iconImageView: UIImageView = {
-       let obj = UIImageView()
+        let obj = UIImageView()
         obj.tintColor = .white
         obj.contentMode = .center
         return obj
     }()
-
     
     private var titleLabel: UILabel = {
-       let obj = UILabel()
+        let obj = UILabel()
         obj.font = .systemFont(ofSize: 12.sizeW, weight: .regular)
         obj.text = "Some te"
         obj.textAlignment = .center
         obj.textColor = .white
+        return obj
+    }()
+    
+    private let lockImageView: UIImageView = {
+        let obj = UIImageView()
+        obj.tintColor = .white
+        obj.image = UIImage(named: "lock")
+        obj.contentMode = .center
         return obj
     }()
     
@@ -52,6 +59,7 @@ class PatternCollectionViewCell: UICollectionViewCell, Reusable {
         baseView.addSubview(baseImageView)
         baseImageView.addSubview(iconImageView)
         baseView.addSubview(titleLabel)
+        baseImageView.addSubview(lockImageView)
         
         makeConstraints()
     }
@@ -77,12 +85,18 @@ class PatternCollectionViewCell: UICollectionViewCell, Reusable {
             make.bottom.equalToSuperview()
         }
         
+        lockImageView.snp.makeConstraints { make in
+            make.size.equalTo(16.sizeH)
+            make.top.right.equalToSuperview().inset(4.sizeH)
+        }
     }
     
     func setupCell(model: PatternModel) {
         titleLabel.text = model.title
         if let iconImage = UIImage(named: model.iconString) {
-               iconImageView.image = iconImage.withRenderingMode(.alwaysTemplate)
-           }
+            iconImageView.image = iconImage.withRenderingMode(.alwaysTemplate)
+        }
+        
+        lockImageView.isHidden = !model.isBlok
     }
 }
