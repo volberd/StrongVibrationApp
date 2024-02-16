@@ -65,9 +65,11 @@ class MainTabBarController: UITabBarController {
     }
     
     private func presentPatternsViewControllerModally() {
-        let patternsViewController = PatternsViewController() // Создание экземпляра PatternsViewController
+        let patternsViewController = PatternsViewController()
+        patternsViewController.delegate = IntensityViewController()
         let navigationController = UINavigationController(rootViewController: patternsViewController) // Обертка в UINavigationController (если необходимо)
         navigationController.modalPresentationStyle = .formSheet
+        
         present(navigationController, animated: true, completion: nil)
     }
     

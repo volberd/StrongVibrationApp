@@ -10,21 +10,19 @@ import UIKit
 class IntensityViewController: UIViewController {
     private let mainView = IntensityView()
     private let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
-
     
+    var selectedMode: ChooseStateModel?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewController()
+    
     }
     
     override func loadView() {
         super.loadView()
         view = mainView
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-            super.viewDidAppear(animated)
-        }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -78,5 +76,12 @@ extension IntensityViewController {
         present(popupVC, animated: true) {
       
         }
+    }
+}
+
+// MARK: - Delegate
+extension IntensityViewController: PatternsViewControllerDelegate {
+    func itemChoose(model: String) {
+        mainView.stateView.model = ChooseStateModel(title: model, icon: "")
     }
 }

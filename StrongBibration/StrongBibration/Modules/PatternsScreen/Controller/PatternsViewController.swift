@@ -7,13 +7,20 @@
 
 import UIKit
 
+protocol PatternsViewControllerDelegate: AnyObject {
+    func itemChoose(model: String)
+}
+
 class PatternsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     private let mainView = PatternsView()
     private var allPatterns = ArrayPaternModelControl.copies
     
+    weak var delegate: PatternsViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewController()
+        
     }
     
     override func loadView() {
@@ -76,8 +83,8 @@ extension PatternsViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.itemChoose(model: "ZHOPA")
         dismiss(animated: true) {
-            
         }
     }
 }
