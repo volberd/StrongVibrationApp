@@ -22,7 +22,8 @@ class LockViewController: UIViewController {
     }
     
     private func initViewController() {
-        mainView.holdButton.addTarget(self, action: #selector(unlockButtonTapped), for: .touchUpInside)
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(holdButtonLongPressed(_:)))
+        mainView.holdButton.addGestureRecognizer(longPressGesture)
     }
 }
 
@@ -30,7 +31,7 @@ class LockViewController: UIViewController {
 //MARK: - Actions
 extension LockViewController {
     @objc private func unlockButtonTapped() {
-        subscriptionHandler()
+        dismiss(animated: true)
     }
     
     private func presentSubscriptionHandler() {
@@ -45,6 +46,12 @@ extension LockViewController {
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    @objc private func holdButtonLongPressed(_ gesture: UILongPressGestureRecognizer) {
+        if gesture.state == .began {
+            unlockButtonTapped()
+        }
     }
     
     func subscriptionHandler() {

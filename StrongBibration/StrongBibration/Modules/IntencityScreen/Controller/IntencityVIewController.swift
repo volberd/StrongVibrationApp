@@ -80,6 +80,7 @@ extension IntensityViewController {
     @objc
     private func blockButtonTaped() {
         let vc = LockViewController()
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true) {
         }
     }
@@ -118,12 +119,6 @@ extension IntensityViewController {
       }
     
     func reloadView(model: String) {
-        DispatchQueue.main.async {
-               let alert = UIAlertController(title: model, message: nil, preferredStyle: .alert)
-               let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-               alert.addAction(action)
-               
-               self.present(alert, animated: true, completion: nil)
-           }
+
     }
 }
