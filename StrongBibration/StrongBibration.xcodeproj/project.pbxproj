@@ -11,8 +11,6 @@
 		BD22A35E2B691F25000E334E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A35D2B691F25000E334E /* SceneDelegate.swift */; };
 		BD22A3652B691F28000E334E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD22A3642B691F28000E334E /* Assets.xcassets */; };
 		BD22A3682B691F28000E334E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD22A3662B691F28000E334E /* LaunchScreen.storyboard */; };
-		BD22A3712B6921D2000E334E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD22A3702B6921D2000E334E /* SnapKit */; };
-		BD22A3732B6921D2000E334E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = BD22A3722B6921D2000E334E /* SnapKit-Dynamic */; };
 		BD22A3792B6994D1000E334E /* SizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A3782B6994D1000E334E /* SizeHelper.swift */; };
 		BD22A37B2B6996E3000E334E /* Double + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A37A2B6996E3000E334E /* Double + ext.swift */; };
 		BD22A37D2B6997F6000E334E /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22A37C2B6997F6000E334E /* UIColor + ext.swift */; };
@@ -53,6 +51,7 @@
 		BDC4E8242B71388200F684F0 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8232B71388200F684F0 /* ListCollectionViewCell.swift */; };
 		BDC4E82A2B726F9600F684F0 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E8292B726F9600F684F0 /* LockViewController.swift */; };
 		BDC4E82C2B726FBD00F684F0 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4E82B2B726FBD00F684F0 /* LockView.swift */; };
+		BDC804CB2B8D007300C3D8A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BDC804CA2B8D007300C3D8A5 /* SnapKit */; };
 		BDD1DE962B728C7A00C869FB /* CustomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE952B728C7A00C869FB /* CustomPopupViewController.swift */; };
 		BDD1DE982B73767400C869FB /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE972B73767400C869FB /* PopupView.swift */; };
 		BDD1DE9B2B73945800C869FB /* ChooseStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1DE9A2B73945800C869FB /* ChooseStateView.swift */; };
@@ -121,8 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD22A3712B6921D2000E334E /* SnapKit in Frameworks */,
-				BD22A3732B6921D2000E334E /* SnapKit-Dynamic in Frameworks */,
+				BDC804CB2B8D007300C3D8A5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,8 +580,7 @@
 			);
 			name = StrongBibration;
 			packageProductDependencies = (
-				BD22A3702B6921D2000E334E /* SnapKit */,
-				BD22A3722B6921D2000E334E /* SnapKit-Dynamic */,
+				BDC804CA2B8D007300C3D8A5 /* SnapKit */,
 			);
 			productName = StrongBibration;
 			productReference = BD22A3582B691F25000E334E /* StrongBibration.app */;
@@ -614,7 +611,7 @@
 			);
 			mainGroup = BD22A34F2B691F25000E334E;
 			packageReferences = (
-				BD22A36F2B6921D2000E334E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BDC804C92B8D007300C3D8A5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = BD22A3592B691F25000E334E /* Products */;
 			projectDirPath = "";
@@ -916,26 +913,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BD22A36F2B6921D2000E334E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		BDC804C92B8D007300C3D8A5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.0;
+				kind = exactVersion;
+				version = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BD22A3702B6921D2000E334E /* SnapKit */ = {
+		BDC804CA2B8D007300C3D8A5 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BD22A36F2B6921D2000E334E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = BDC804C92B8D007300C3D8A5 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		BD22A3722B6921D2000E334E /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD22A36F2B6921D2000E334E /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

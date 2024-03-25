@@ -7,16 +7,10 @@
 
 import UIKit
 
-protocol PatternsViewControllerDelegate: AnyObject {
-    func itemChoose(model: String)
-}
-
 class PatternsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     private let mainView = PatternsView()
     private var allPatterns = ArrayPaternModelControl.copies
-    
-    weak var delegate: PatternsViewControllerDelegate?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewController()
@@ -83,8 +77,9 @@ extension PatternsViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.itemChoose(model: "ZHOPA")
         dismiss(animated: true) {
-        }
+                   let selectedModel = self.allPatterns[indexPath.row]
+                   NotificationCenter.default.post(name: NSNotification.Name("PatternSelected"), object: selectedModel)
+               }
     }
 }

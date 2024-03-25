@@ -9,6 +9,8 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     let bubbleTabBar = BubbleTabBar()
+    let intensityViewController = IntensityViewController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,14 +67,12 @@ class MainTabBarController: UITabBarController {
     }
     
     private func presentPatternsViewControllerModally() {
-        let patternsViewController = PatternsViewController()
-        patternsViewController.delegate = IntensityViewController()
-        let navigationController = UINavigationController(rootViewController: patternsViewController) // Обертка в UINavigationController (если необходимо)
-        navigationController.modalPresentationStyle = .formSheet
-        
-        present(navigationController, animated: true, completion: nil)
-    }
-    
+            let patternsViewController = PatternsViewController()
+            let navigationController = UINavigationController(rootViewController: patternsViewController)
+            navigationController.modalPresentationStyle = .formSheet
+            present(navigationController, animated: true, completion: nil)
+        }
+
     
     
     private var subscriptions = Set<AnyCancellable>()

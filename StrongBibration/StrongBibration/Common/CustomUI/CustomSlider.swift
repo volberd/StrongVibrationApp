@@ -8,18 +8,18 @@
 import UIKit
 
 final class Slider: UISlider {
-    private let baseLayer = CALayer() // Step 3
-    private let trackLayer = CAGradientLayer() // Step 7
+    private let baseLayer = CALayer()
+    private let trackLayer = CAGradientLayer() 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         setup()
     }
     private func setup() {
         clear()
-        createBaseLayer() // Step 3
-        createThumbImageView() // Step 5
-        configureTrackLayer() // Step 7
-        addUserInteractions() // Step 8
+        createBaseLayer()
+        createThumbImageView()
+        configureTrackLayer()
+        addUserInteractions()
     }
     private func clear() {
         tintColor = .clear
@@ -29,10 +29,7 @@ final class Slider: UISlider {
     }
     // Step 3
     private func createBaseLayer() {
-        //        baseLayer.borderWidth = 1
-        //        baseLayer.borderColor = UIColor.white.withAlphaComponent(0.3).cgColor
         baseLayer.masksToBounds = true
-        //        baseLayer.backgroundColor = UIColor.white.cgColor
         baseLayer.frame = .init(x: 0, y: frame.height / 4, width: frame.width, height: frame.height / 3)
         baseLayer.cornerRadius = baseLayer.frame.height / 2
         layer.insertSublayer(baseLayer, at: 0)
@@ -53,16 +50,13 @@ final class Slider: UISlider {
         addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
     }
     @objc private func valueChanged(_ sender: Slider) {
-        // Step 10
         CATransaction.begin()
         CATransaction.setDisableActions(true)
-        // Step 9
         let thumbRectA = thumbRect(forBounds: bounds, trackRect: trackRect(forBounds: bounds), value: value)
         trackLayer.frame = .init(x: 0, y: frame.height / 4, width: thumbRectA.midX, height: frame.height / 2)
-        // Step 10
         CATransaction.commit()
     }
-    // Step 5
+
     private func createThumbImageView() {
         let thumbSize = (3 * frame.height) / 4
         let thumbView = ThumbView(frame: .init(x: 0, y: 0, width: thumbSize, height: thumbSize))
@@ -78,7 +72,7 @@ final class Slider: UISlider {
         setThumbImage(thumbSnapshot, for: .selected)
     }
 }
-// Step 4
+
 final class ThumbView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -98,7 +92,7 @@ final class ThumbView: UIView {
         addSubview(middleView)
     }
 }
-// Step 4
+
 extension UIView {
     var snapshot: UIImage {
         let renderer = UIGraphicsImageRenderer(bounds: bounds)

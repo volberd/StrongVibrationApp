@@ -8,8 +8,15 @@
 import UIKit
 import SnapKit
 
+protocol CustomSegmentedControlDelegate: AnyObject {
+    func segmentedControl(_ segmentedControl: CustomSegmentedControl, didSelectItemAt index: Int)
+}
+
+
 class CustomSegmentedControl: UIControl {
     private var items: [CustomControlItemView]
+    
+    weak var delegate: CustomSegmentedControlDelegate?
     
     private var selectedItem: CustomControlItemView? {
         willSet {
@@ -68,10 +75,8 @@ class CustomSegmentedControl: UIControl {
     }()
     
     private func setup() {
-//        layer.borderWidth = 10.sizeH
         layer.borderColor = UIColor.theme(.white).cgColor
         backgroundColor = .theme(.white)
-//        self.selectedItem = self.items[1]
         self.selectedItem = self.items[0]
         
         addSubview(backgroundView)
@@ -114,14 +119,19 @@ class CustomSegmentedControl: UIControl {
 
     @objc private func didItemTap(_ sender: UITapGestureRecognizer) {
         guard let itemView = sender.view as? CustomControlItemView,
-        let item = items.first(where: {$0 == itemView}) else {
-            return
+            let index = items.firstIndex(where: { $0 == itemView }) else {
+                return
         }
         
-        animateLine(item: item, animate: selectedItem != nil)
-        self.selectedItem = item
+        self.selectedItem = items[index]
+        
+        self.delegate?.segmentedControl(self, didSelectItemAt: index)
+        
+        animateLine(item: items[index], animate: selectedItem != nil)
         self.sendActions(for: .valueChanged)
     }
+
+
     
     private func animateLine(item: CustomControlItemView, animate: Bool) {
         if animate {
