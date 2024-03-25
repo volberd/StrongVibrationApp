@@ -3,4 +3,322 @@
    uuid = "49966154-6CE7-4C74-B2EE-E2A134E1657B"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7ABA870-C8B9-4B73-9023-AF2BF89B4801"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "restoreTapped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7ABA870-C8B9-4B73-9023-AF2BF89B4801 - 5e18f6bd213862b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in StrongBibration.NewPaywallViewController.restoreTapped() -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "A7ABA870-C8B9-4B73-9023-AF2BF89B4801 - 9402d8adfa0b0452"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in StrongBibration.NewPaywallViewController.restoreTapped() -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "A7ABA870-C8B9-4B73-9023-AF2BF89B4801 - e66a6e2556917eb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in StrongBibration.NewPaywallViewController.restoreTapped() -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "A7ABA870-C8B9-4B73-9023-AF2BF89B4801 - 424cd3d16fc5f8b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in StrongBibration.NewPaywallViewController.restoreTapped() -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F9ACF9E-180E-40E4-B287-5FAEEECA572C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "isSubscriptionValid()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78C05082-88C8-4812-96B8-D0C5EE6923D1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "isSubscriptionValid()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0333065-65FC-4F98-8ADD-323FEC220222"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "buySubscription()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4E11B77-4E42-4C98-9C4E-AC1DE98AA970"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "buySubscription()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4072C9EB-89F9-4826-A8E0-A4A995AA7888"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "buySubscription()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "759AF4FC-EE74-40F7-AE75-CF53E4AB2535"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "buySubscription()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8216588-2FFF-4F52-A72D-FDB32E12A5DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "buySubscription()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C8216588-2FFF-4F52-A72D-FDB32E12A5DD - 230379eb0de9cf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for StrongBibration.NewPaywallViewController.buySubscription() async throws -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "C8216588-2FFF-4F52-A72D-FDB32E12A5DD - aa9d2b043f1d6342"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (StoreKit.Product) -&gt; Swift.Bool in StrongBibration.NewPaywallViewController.buySubscription() async throws -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C67506CD-1877-4B11-B2E2-74C5C600CFCE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "buySubscription()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C67506CD-1877-4B11-B2E2-74C5C600CFCE - 230379eb0de9cb4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for StrongBibration.NewPaywallViewController.buySubscription() async throws -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "C67506CD-1877-4B11-B2E2-74C5C600CFCE - 25cd44e8c89c85cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for StrongBibration.NewPaywallViewController.buySubscription() async throws -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "C67506CD-1877-4B11-B2E2-74C5C600CFCE - f764f6938f77d0b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for StrongBibration.NewPaywallViewController.buySubscription() async throws -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "C67506CD-1877-4B11-B2E2-74C5C600CFCE - 8dc2d516f838b6b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for StrongBibration.NewPaywallViewController.buySubscription() async throws -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/SubscribeScreen/Controller/PaywallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A63AEEC-036F-48AA-8379-1BCFA1994269"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StrongBibration/Modules/PatternsScreen/Controller/PatternsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

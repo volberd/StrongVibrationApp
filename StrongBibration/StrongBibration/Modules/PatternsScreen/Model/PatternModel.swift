@@ -11,7 +11,7 @@ class ArrayPaternModelControl {
         arr.append(PatternModel(id: 0,
                                 iconString: "pluse",
                                 title: "Create",
-                                isBlok: false))
+                                isBlok: true))
         arr.append(PatternModel(id: 1,
                                 iconString: "tornado",
                                 title: "Tornado",

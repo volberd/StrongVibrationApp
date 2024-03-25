@@ -10,6 +10,7 @@ import UIKit
 class PatternsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     private let mainView = PatternsView()
     private var allPatterns = ArrayPaternModelControl.copies
+    private let storeKit = SubscriptionManager()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,9 +78,70 @@ extension PatternsViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        dismiss(animated: true) {
-                   let selectedModel = self.allPatterns[indexPath.row]
-                   NotificationCenter.default.post(name: NSNotification.Name("PatternSelected"), object: selectedModel)
-               }
+        if !allPatterns[indexPath.row].isBlok {
+            dismiss(animated: true) {
+                let selectedModel = self.allPatterns[indexPath.row]
+                NotificationCenter.default.post(name: NSNotification.Name("PatternSelected"), object: selectedModel)
+            }
+        } else {
+            subscriptionHandler()
+        }
+    }
+    
+    func subscriptionHandler() {
+        if CachingManager.shared.isSubscriptionActive {
+            
+        } else {
+            if storeKit.purchasedSubscriptions.isEmpty {
+                Task {
+                    
+                    if storeKit.purchasedSubscriptions.isEmpty {
+                        presentSubscriptionHandler()
+                    } else {
+                        if let restoreDate = CachingManager.shared.expirationDate {
+                            if Date().timeIntervalSince1970 < restoreDate {
+                            } else {
+                                presentSubscriptionHandler()
+                            }
+                        } else {
+                            //                        DateManager.shared.getSubscriptionExpirationDate()
+                            let restoreDate = CachingManager.shared.expirationDate
+                            if Date().timeIntervalSince1970 < restoreDate ?? 0 {
+                            } else {
+                                presentSubscriptionHandler()
+                            }
+                        }
+                    }
+                }
+            } else {
+                if let restoreDate = CachingManager.shared.expirationDate {
+                    if Date().timeIntervalSince1970 < restoreDate {
+                    } else {
+                        presentSubscriptionHandler()
+                    }
+                } else {
+                    //                DateManager.shared.getSubscriptionExpirationDate()
+                    let restoreDate = CachingManager.shared.expirationDate
+                    if Date().timeIntervalSince1970 < restoreDate ?? 0 {
+                    } else {
+                        presentSubscriptionHandler()
+                    }
+                }
+            }
+        }
+    }
+    
+    private func presentSubscriptionHandler() {
+        let subscriptionViewController = NewPaywallViewController(storeKit: storeKit, completion: testHandler)
+        subscriptionViewController.modalPresentationStyle = .fullScreen
+        subscriptionViewController.modalTransitionStyle = .crossDissolve
+        present(subscriptionViewController, animated: true)
+    }
+    
+    private func testHandler() {
+        let alert = UIAlertController(title: "Congratulations!", message: "Success with subscription", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
