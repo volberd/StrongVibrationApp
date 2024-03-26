@@ -57,7 +57,7 @@ class IntensityView: UIView {
         return obj
     }()
     
-    private let customSlider: Slider = {
+    let customSlider: Slider = {
         let obj = Slider()
         obj.backgroundColor = .clear
         return obj
@@ -127,6 +127,12 @@ class IntensityView: UIView {
         return obj
     }()
     
+    var lockView: LockView = {
+       let obj = LockView()
+        obj.isHidden = true
+        return obj
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubviews()
@@ -151,6 +157,7 @@ class IntensityView: UIView {
         addSubview(hardLabel)
         addSubview(segmentedControl)
         addSubview(stateStackView)
+        addSubview(lockView)
         
         stateStackView.addArrangedSubview(pressButtonTitle)
         stateStackView.addArrangedSubview(stateView)
@@ -224,6 +231,10 @@ class IntensityView: UIView {
         stateStackView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(vibrateButton.snp.bottom).offset(25.sizeH)
+        }
+        
+        lockView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
     }
     

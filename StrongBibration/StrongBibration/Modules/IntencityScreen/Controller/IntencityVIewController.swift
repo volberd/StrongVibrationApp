@@ -11,7 +11,9 @@ import AudioToolbox
 
 class IntensityViewController: UIViewController, CustomSegmentedControlDelegate {
     func segmentedControl(_ segmentedControl: CustomSegmentedControl, didSelectItemAt index: Int) {
-        
+        if isVibrating {
+            startVibrating()
+        }
     }
     
     private let mainView = IntensityView()
@@ -19,6 +21,7 @@ class IntensityViewController: UIViewController, CustomSegmentedControlDelegate 
     var selectedMode: ChooseStateModel?
     var isVibrating = false
     var selectedIndex: Int32 = 0
+    var isBlockView = false
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +42,20 @@ class IntensityViewController: UIViewController, CustomSegmentedControlDelegate 
         mainView.stopAnimation()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isVibrating {
+            mainView.animateWaveView()
+        }
+    }
+    
     private func initViewController() {
         mainView.vibrateButton.addTarget(self, action: #selector(vibrateButtonTapped), for: .touchUpInside)
         mainView.musicButton.addTarget(self, action: #selector(openMusicController), for: .touchUpInside)
         mainView.lockButton.addTarget(self, action: #selector(blockButtonTaped), for: .touchUpInside)
         mainView.notVibrationButton.addTarget(self, action: #selector(showCustomPopup), for: .touchUpInside)
+        mainView.customSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+
     }
     
     @objc private func patternSelected(_ notification: Notification) {
@@ -56,12 +68,20 @@ class IntensityViewController: UIViewController, CustomSegmentedControlDelegate 
 
 //MARK: - Actions
 extension IntensityViewController {
+    @objc private func sliderValueChanged() {
+        if isVibrating {
+            startVibrating()
+        }
+    }
+    
     @objc
     private func vibrateButtonTapped() {
         if mainView.isAnimating {
+            isVibrating = false
             mainView.stopAnimation()
             stopVibrating()
         } else {
+            isVibrating = true
             mainView.animateWaveView()
             startVibrating()
             impactFeedbackGenerator.impactOccurred()
@@ -79,6 +99,7 @@ extension IntensityViewController {
     
     @objc
     private func blockButtonTaped() {
+        isBlockView = true
         let vc = LockViewController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true) {
@@ -96,22 +117,36 @@ extension IntensityViewController {
     }
     
     func startVibrating() {
-        isVibrating = true
-        if mainView.segmentedControl.selectedIndex == 0 {
-            selectedIndex = 1000000
-        } else if mainView.segmentedControl.selectedIndex == 1 {
-            selectedIndex = 500000
-        } else {
-            selectedIndex = 10000
-        }
-
-        DispatchQueue.global().async {
-            while self.isVibrating {
-                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                usleep(useconds_t(self.selectedIndex))
+        if isVibrating {
+            let intensity = calculateIntensity()
+            DispatchQueue.global().async {
+                while self.isVibrating {
+                    AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                    usleep(useconds_t(intensity))
+                }
             }
         }
     }
+
+    func calculateIntensity() -> Int32 {
+        let sliderValue = mainView.customSlider.value
+        let segmentedControlIndex = mainView.segmentedControl.selectedIndex
+        var intensity: Int32 = 0
+        
+        switch segmentedControlIndex {
+        case 0:
+            intensity = Int32(1000000 - sliderValue * 50000)
+        case 1:
+            intensity = Int32(500000 - sliderValue * 25000)
+        case 2:
+            intensity = Int32(10000 - sliderValue * 500)
+        default:
+            break
+        }
+        
+        return intensity
+    }
+
 
       
       func stopVibrating() {

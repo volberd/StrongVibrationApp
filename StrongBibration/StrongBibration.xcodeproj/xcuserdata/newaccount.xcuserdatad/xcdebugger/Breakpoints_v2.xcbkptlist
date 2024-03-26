@@ -318,6 +318,38 @@
             endingLineNumber = "82"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5A63AEEC-036F-48AA-8379-1BCFA1994269 - 5d1e6bb6fab58dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StrongBibration.PatternsViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/PatternsScreen/Controller/PatternsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "5A63AEEC-036F-48AA-8379-1BCFA1994269 - f099eb64457b531a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in StrongBibration.PatternsViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "StrongBibration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/newaccount/Documents/GitHub/StrongVibrationApp/StrongBibration/StrongBibration/Modules/PatternsScreen/Controller/PatternsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
