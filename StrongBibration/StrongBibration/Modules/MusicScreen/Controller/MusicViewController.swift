@@ -8,9 +8,19 @@
 import UIKit
 import MediaPlayer
 
+struct MusicCellModel {
+    var title: String
+    var time: Double
+}
+
 class MusicViewController: UIViewController {
     private let mainView = MusicView()
     private let genresTitles = GenresModel.allCases
+    
+    var someData: [MusicCellModel] = []
+    
+    
+    
     var selectedSong = "Vova"
     
     override func viewDidLoad() {
@@ -48,7 +58,8 @@ class MusicViewController: UIViewController {
 extension MusicViewController {
     @objc
     private func closeController() {
-        self.dismiss(animated: false)
+//        self.dismiss(animated: false)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -88,7 +99,7 @@ extension MusicViewController {
     private func getSectionCount(collectionView: UICollectionView, section: Int) -> Int {
         switch collectionView {
         case mainView.listsCollectionView:
-            return genresTitles.count
+            return someData.count
         case mainView.titlesCollectionView:
             return genresTitles.count
         default:

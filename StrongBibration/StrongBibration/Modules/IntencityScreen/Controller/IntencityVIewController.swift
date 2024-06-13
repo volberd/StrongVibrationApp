@@ -10,12 +10,6 @@ import AudioToolbox
 
 
 class IntensityViewController: UIViewController, CustomSegmentedControlDelegate {
-    func segmentedControl(_ segmentedControl: CustomSegmentedControl, didSelectItemAt index: Int) {
-        if isVibrating {
-            startVibrating()
-        }
-    }
-    
     private let mainView = IntensityView()
     private let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     var selectedMode: ChooseStateModel?
@@ -91,10 +85,9 @@ extension IntensityViewController {
     @objc
     private func openMusicController() {
         let vc = MusicViewController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: false) {
-            print(vc.selectedSong)
-        }
+       
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     @objc
@@ -155,5 +148,11 @@ extension IntensityViewController {
     
     func reloadView(model: String) {
 
+    }
+    
+    func segmentedControl(_ segmentedControl: CustomSegmentedControl, didSelectItemAt index: Int) {
+        if isVibrating {
+            startVibrating()
+        }
     }
 }

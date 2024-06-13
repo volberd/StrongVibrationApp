@@ -26,6 +26,12 @@ class ListCollectionViewCell: UICollectionViewCell {
         return obj
     }()
     
+    private let custmView: Slider = {
+       let obj = Slider()
+        
+        return obj
+    }()
+    
     private var leftStackView: UIStackView = {
        let obj = UIStackView()
         obj.axis = .horizontal
