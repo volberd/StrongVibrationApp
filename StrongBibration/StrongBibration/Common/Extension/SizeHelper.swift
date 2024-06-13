@@ -10,7 +10,7 @@ import UIKit
 
 extension BinaryFloatingPoint {
     private var size: CGSize {
-        return CGSize(width: 375, height: 812)
+        return CGSize(width: 360, height: 752)
     }
     
     /// iPhone Template: 414 x 896

@@ -28,8 +28,8 @@ extension PatternsNavigationController {
     private func initNavigationController() {
         let mainTabBarItem = UITabBarItem(
             title: "Patterns",
-            image: UIImage(named: "patternsIcon"),
-            selectedImage: UIImage(named: "patternsIcon"))
+            image: UIImage(named: ""),
+            selectedImage: UIImage(named: ""))
         
         self.tabBarItem = mainTabBarItem
     }
